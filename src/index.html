@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=""/>
+    <title>Заголовок</title>
+    <link rel="shortcut icon" href="favicon.png"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="libs/owl-carousel2-2.2.1/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="libs/owl-carousel2-2.2.1/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="libs/countdown/jquery.countdown.css"/>
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+
+</head>
+<body>
+<header id="header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="menu_icon visible-xs-block">
+                <div class="wrap_icon">
+                    <i class="fa fa-bars" data-toggle="collapse" data-target="#mob_menu" aria-hidden="true"></i>
+                    <div class="run_string">
+                        <marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Quaerat, saepe.
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper_nav hidden-xs">
+                <div class="home_icon">
+                    <a class="active" href="/">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <ul>
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li class="dropdown">
+                        <span>
+                            О системе
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Описание СККО</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <span>
+                            Владельцам
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Порядок заключения договора</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a class="active" href="#">График подключения к СККО</a></li>
+                            <li><a href="#">Тарифы и способы оплаты</a></li>
+                            <li><a href="#">Вопросы/Ответы</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>
+                            Публикации
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Нормативные правовые акты</a></li>
+                            <li><a href="#">Разъяснения МНС</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Цто</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Наши партнёры</a></li>
+                </ul>
+            </div>
+        </div><!-- /.container -->
+    </nav><!--end navbar-->
+    <nav class="mobile_menu visible-xs-block">
+        <div class="container">
+            <div id="mob_menu" class="collapse">
+                <div class="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Найти...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" type="button">Поиск</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li data-toggle="collapse" data-target="#item1">
+                        <div class="title">
+                            <span>О системе</span>
+                            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul class="collapse" id="item1">
+                            <li><a href="#">Описание СККО</a></li>
+                        </ul>
+                    </li>
+                    <li data-toggle="collapse" data-target="#item2">
+                        <div class="title active">
+                            <span>Владельцам</span>
+                            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul class="collapse" id="item2">
+                            <li><a href="#">Порядок заключения договора</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a class="active" href="#">График подключения к СККО</a></li>
+                            <li><a href="#">Тарифы и способы оплаты</a></li>
+                            <li><a href="#">Вопросы/Ответы</a></li>
+                        </ul>
+                    </li>
+                    <li data-toggle="collapse" data-target="#item3">
+                        <div class="title">
+                            <span>Публикации</span>
+                            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                        </div>
+                        <ul class="collapse" id="item3">
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Нормативные правовые акты</a></li>
+                            <li><a href="#">Разъяснения МНС</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ЦТО</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Наши партнёры</a></li>
+                </ul>
+            </div><!--end #mob_menu-->
+        </div><!--end container-->
+    </nav><!--end mobile_menu-->
+    <div class="wrap_header">
+        <div class="container">
+            <div class="header_content">
+                <div class="logo">
+                    <h1>СККО</h1>
+                    <div class="phone visible-xs">
+                        <i class="fa fa-phone-square" aria-hidden="true"></i>
+                        <span>8 (017) 269-18-00</span>
+                    </div>
+                </div><!--end logo-->
+                <div class="site_title">
+                    <h2>Система контроля кассового оборудования</h2>
+                    <span class="visible-xs">Управляйте своим бизнесом через Internet</span>
+                </div><!-- end site_title-->
+                <div class="buttons">
+                    <a href="https://skko.by">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                        <span>Войти с ЭЦП</span>
+                    </a>
+                    <a href="http://inbox.skko.by/">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>Почта</span>
+                    </a>
+                </div>
+            </div><!-- end header_content-->
+            <div class="meta_info hidden-xs">
+                <div class="phone">
+                    <i class="fa fa-phone-square"></i>
+                    <span>8 (017) 269-18-00</span>
+                </div>
+                <div class="slogan">
+                    <span>Управляйте своим бизнесом через Internet</span>
+                </div>
+            </div><!-- end meta_info-->
+            <div class="panel hidden-xs">
+                <div class="icons">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </div>
+                <div class="run_string">
+                    <marquee onmouseover="this.stop()" onmouseout="this.start()" behavior="scroll" direction="left">
+                        Поздравляем Вас с Рождеством и Новым годом!
+                    </marquee>
+                </div>
+                <div class="search">
+                    <form action="" method="post">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="text" placeholder="Искать..." >
+                        <button type="submit" onclick="this.form.searchword.focus();">Поиск</button>
+                    </form>
+                </div>
+            </div><!-- end panel-->
+        </div><!--end container-->
+    </div><!-- end wrap_header-->
+
+</header>
+<section id="slider">
+    <div class="container">
+        <div class="slider_wrapper">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><a href="#"><img src="images/baners/sys3.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/computer_center_service.jpg" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/electron_service.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/belkassa.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/tehconsalting.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/transitplus.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/autocombi2.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/your_reclama.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/htc.gif" alt=""></a></div>
+                <div class="item"><a href="#"><img src="images/baners/electron_service.gif" alt=""></a></div>
+            </div>
+            <div class="owl-controls">
+                <div class="owl-nav">
+                    <a class="owl-prev"><i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+                    </a>
+                    <a class="owl-next"><i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div><!-- end /.owl-controls -->
+        </div><!--end /.slider_wrapper-->
+    </div>
+</section>
+<section id="news">
+    <div class="container">
+        <div class="wrap_news">
+            <div class="row">
+                <h1>Новости</h1>
+                <div class="col-md-6">
+                    <div class="top_article">
+                        <div class="image">
+                            <img src="images/articles/maxresdefault.jpg" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="title">
+                                <div class="date">
+                                    <div class="day">27</div>
+                                    <div class="month">августа</div>
+                                    <div class="year">2017</div>
+                                </div>
+                                <h2>
+                                    <a href="#">
+                                        Как отправить договор СККО и сопутствующие документы почтой или нарочным?
+                                    </a>
+                                </h2>
+                            </div>
+                            <div class="text">
+                                <p>Заполненный и подписанный <a href="/vladeltsam/dokumenty">договор оказания услуг СККО&nbsp;</a>
+                                    и другие документы для его заключения могут быть направлены почтой:&nbsp;</p>
+                                <p>220005, г.Минск, пр. Машерова, 7-123</p>
+                                <p>либо предоставлены нарочным по месту расположения <a href="/kontakti/15-kontakty">отделов
+                                    технической поддержки СККО</a></p>
+                                <p>Ознакомиться с порядоком заключения договора вы можете<a
+                                        href="/vladeltsam/poryadok-zaklyucheniya-dogovora" target="_blank"> здесь.</a>
+                                </p>
+                            </div>
+
+                            <div class="link">
+                                <a href="/">
+                                    <span>Подробнее</span>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div><!--end top_article-->
+                </div>
+                <div class="col-md-6">
+                    <div class="articles">
+                        <div class="article">
+                            <div class="art_img">
+                                <img src="images/articles/attension.jpg" alt="">
+                            </div>
+                            <div class="art_cont">
+                                <div class="date">
+                                    25 сентября 2017
+                                </div>
+                                <div class="title">
+                                    <h3>
+                                        О корректировке сроков подключения СПД к АИС ККО.
+                                    </h3>
+                                </div>
+                                <div class="art_text">
+                                    <p>Постановлением Совета Министров Республики Беларусь и Национального банка
+                                        Республики Беларусь от 03.03.2017 №181/5 (далее - постановление №181/5) внесены
+                                        изменения в постановление Совета Министров Республики Беларусь и Национального
+                                        банка
+                                        Республики Беларусь "Об использовании кассового оборудования, платежных
+                                        терминалов,
+                                        автоматических электронных аппаратов, торговых автоматов и о приеме наличных
+                                        денежных средств, банковских платежных карточек при продаже товаров, выполнении
+                                        работ, оказании услуг, осуществлении деятельности в сфере игорного бизнеса,
+                                        лотерейной деятельности, проведении электронных интерактивных игр и выпуске в
+                                        обращение кассового оборудования" от 6 июля 2011 г. № 924/16. Изменения вступили
+                                        в
+                                        силу 9 марта 2017г.</p>
+                                    <p>Постановлением скорректированы сроки подключения кассового оборудования к системе
+                                        контроля кассового оборудования (СККО) для отдельных категорий субъектов
+                                        хозяйствования.</p>
+                                    <p>С учетом внесенных изменений, прием наличных денежных средств и (или) банковских
+                                        платежных карточек с применением кассового оборудования с установленным
+                                        средством контроля налоговых органов (СКНО) осуществляется субъектами
+                                        хозяйствования в следующие сроки:</p>
+                                </div>
+                                <div class="link">
+                                    <a href="">
+                                        <span>Подробнее</span>
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article">
+                            <div class="art_img">
+                                <img src="images/articles/bank_account.jpg" alt="">
+                            </div>
+                            <div class="art_cont">
+                                <div class="date">
+                                    25 сентября 2017
+                                </div>
+                                <div class="title">
+                                    <h3>
+                                        Об изменении банковских реквизитов.
+                                    </h3>
+                                </div>
+                                <div class="art_text">
+                                    <p>Республиканское унитарное предприятие "Информационно-издательский центр по
+                                        налогам и сборам" (далее – предприятие) (УНП 190819036) в связи со вступлением в
+                                        силу с 04.07.2017 постановления Правления Национального банка Республики
+                                        Беларусь от 27.07.2015 №440 «О структуре номера счета», переходом на
+                                        международную структуру банковского идентификационного кода в Республике
+                                        Беларусь информирует об изменении с 04.07.2017 своих банковских реквизитов:</p>
+                                    <p></p>
+                                    <p>р/с BY93 BPSB 3012 1049 7704 2933 0000</p>
+                                    <p>в региональной дирекции № 700 по г.Минску и Минской области ОАО
+                                        «БПС-Сбербанк»,</p>
+                                    <p>BIC BPSBBY2X,</p>
+                                    <p>адрес банка: 220035, г. Минск, пр. Машерова, 80.</p>
+                                </div>
+                                <div class="link">
+                                    <a href="">
+                                        <span>Подробнее</span>
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="all_news">
+                        <button>
+                            <a href="#">Смотреть все новости</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="block_links">
+    <div class="container">
+        <div class="wrap_block_links">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h3>Разделы сайта</h3>
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">О системе</a></li>
+                        <li><a href="">Владельцам</a></li>
+                        <li><a href="">Публикации</a></li>
+                        <li><a href="">Цто</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Наши партнёры</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h3>Рекомендуем</h3>
+                    <ul>
+                        <li><a href="http://ckta.by/" target="_blank" rel="noopener noreferrer">Система контроля
+                            торговых автоматов</a></li>
+                        <li><a href="http://pki.by/" target="_blank" rel="noopener noreferrer">Удостоверяющий центр РУП
+                            «Информационно-издательский центр по налогам и сборам»</a></li>
+                        <li><a href="https://nces.by" target="_blank" rel="noopener noreferrer">РУП «Национальный центр
+                            электронных услуг»</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <h3>Местоположение</h3>
+                    <!-- Blank250 Starts Here -->
+                    <div class="blank">
+                        <script type="text/javascript" charset="utf-8" async
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A92688d51a228164bcab825cd08db6ba04bf98ed47a6f84c9a35555cd9913037d&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                    <!-- Blank250 Ends Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="wrap_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+
+                    <div id="foot_left_block" class="foot_block">
+                        <h3>Сервисы оплаты услуг</h3>
+                        <img src="images/baners/erip_pay.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div id="foot_center_block" class="foot_block">
+                        <h3>Разместить рекламу</h3>
+                        <p>
+                            Контактный телефон по вопросам размещения рекламы на сайте
+                        </p>
+                        <p>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>8 (017) 269-19-08</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div id="foot_right_block" class="foot_block">
+                        <h3>Техподдержка 24ч/7д</h3>
+                        <ul>
+                            <li><i class="fa fa-mobile-phone"></i><span>8 (029) 873-27-15</span></li>
+                            <li><i class="fa fa-mobile-phone"></i><span>8 (029) 873-57-81</span></li>
+                            <li><i class="fa fa-mobile-phone"></i><span>8 (025) 694-78-61</span></li>
+                            <li><i class="fa fa-envelope-o"></i><span>info@skko.by</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="all_reserve">
+            <img src="images/icons/rup_icon.png" alt="">
+            <p>РУП "Информационно-издательский центр по налогам и сборам". 2015 - 2017 год.</p>
+        </div>
+    </div>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<script src="libs/jquery/jquery-3.2.1.min.js"></script>
+<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="libs/owl-carousel2-2.2.1/js/owl.carousel.min.js"></script>
+<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+<script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+<script src="libs/scrollto/jquery.scrollTo.min.js"></script>
+<script src="libs/countdown/jquery.plugin.js"></script>
+<script src="libs/countdown/jquery.countdown.min.js"></script>
+<script src="libs/countdown/jquery.countdown-ru.js"></script>
+<script src="libs/landing-nav/navigation.js"></script>
+<script src="js/common.js"></script>
+<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

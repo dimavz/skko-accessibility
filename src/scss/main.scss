@@ -1,0 +1,24 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+  @include clear;
+  @include font-default;
+}
+
+body{
+  background-color: $green;
+}
+
+a{
+  text-decoration: none;
+  &.active{
+    color: $yellow;
+  }
+}
+
+ul{
+  @include clear-list;
+}

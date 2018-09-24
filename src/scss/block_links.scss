@@ -1,0 +1,47 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#block_links{
+
+  background-color:$green;
+  margin-bottom: 10px;
+
+  .wrap_block_links{
+    background-color:$white;
+    border: 3px solid $green-light;
+    border-radius: 3px;
+    padding: 10px;
+    padding-bottom: 20px;
+
+    h3{
+      margin-top: 15px;
+      margin-left: 10px;
+      font-size: 20px;
+      color: $green-light;
+      text-transform: uppercase;
+    }
+    ul{
+      margin-left: 20px;
+      margin-bottom: 15px;
+      padding-left: 20px;
+
+
+      li{
+        list-style-type:square;
+        color: $green;
+        a{
+          color: $green;
+          text-decoration: none;
+
+          &:hover{
+            color: $green-light;
+          }
+        }
+      }
+    }
+    .blank{
+      padding: 5px;
+    }
+  }
+}

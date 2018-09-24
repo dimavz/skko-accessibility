@@ -1,0 +1,71 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#footer{
+  padding-top: 10px;
+  background-color:$black;
+  padding-bottom: 20px;
+
+  .wrap_footer{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color:$grey;
+    border-bottom: 1px dashed $white;
+    border-top: 1px dashed $white;
+
+
+    .foot_block{
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      color: $white;
+      img{
+        width: 200px;
+        margin-left: 30px;
+      }
+
+      h3{
+        color: $green-light;
+        margin-bottom: 10px;
+      }
+      p{
+        color: $white;
+      }
+      i{
+        color: $marine;
+        font-size: 22px;
+        margin-right: 20px;
+      }
+      i.fa.fa-envelope-o{
+        font-size: 16px;
+        margin-right: 15px;
+      }
+      span{
+        color: $yellow;
+      }
+      ul{
+        padding: 10px;
+        li{
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+  }
+  .all_reserve{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      color: $white;
+    }
+
+    img{
+      width: 32px;
+      height: 32px;
+      margin-right: 20px;
+    }
+  }
+}
