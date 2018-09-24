@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
+    sourcemaps = require('gulp-sourcemaps'),
     browser = require('browser-sync');
 
 var config ={
@@ -34,9 +35,11 @@ gulp.task('browser', function(){
 
 gulp.task('scss', function () {
     gulp.src(config.paths.scss)
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(concat(config.output.nameFileCss))
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.pathCss))
         .pipe(browser.reload({stream: true}));
 });
