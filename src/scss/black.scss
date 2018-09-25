@@ -1,0 +1,122 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+body.color2 {
+  background-color: $color2;
+  color: $color1;
+
+  #header .accessibility {
+
+    background-color: $color2;
+
+    .settings {
+
+      .inputbox {
+        color: $color2;
+      }
+
+      .a-fontsize {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        a {
+          background-image: url(../images/icons/black/b_fontsize.png);
+        }
+      }
+
+      .a-images {
+        display: flex;
+        margin-left: 10px;
+
+          a {
+            background-image: url(../images/icons/black/b_images.png);
+          }
+      }
+
+      .a-settings{
+        a{
+          color: $color1;
+        }
+
+      }
+
+      .a-normalversion{
+        a{
+          color: $color1;
+        }
+      }
+
+      .popped{
+        background-color: $color2;
+        color: $color1;
+
+
+        #color2{
+          border: 1px solid $color1;
+        }
+
+        .choose-font-family{
+          a{
+            &#roboto{
+              border: 1px solid $color2;
+              background-color: $color1;
+              color: $color2;
+            }
+
+            &#sans-serif{
+              border: 1px solid $color1;
+              background-color: $color2;
+              color: $color1;
+            }
+
+            &#serif{
+              border: 1px solid $color1;
+              background-color: $color2;
+              color: $color1;
+            }
+          }
+        }
+
+        .choose-letter-spacing{
+          a{
+            &#spacing-small{
+              border: 1px solid $color2;
+              background-color: $color1;
+              color: $color2;
+            }
+
+            &#spacing-normal{
+              border: 1px solid $color1;
+              background-color: $color2;
+              color: $color1;
+            }
+
+            &#spacing-big{
+              border: 1px solid $color1;
+              background-color: $color2;
+              color: $color1;
+            }
+          }
+        }
+
+        .saveit{
+          .closepopped{
+            background-color: $color2;
+            color: $color1;
+            border: 4px double $color1;
+          }
+
+          .default{
+            background-color: $color2;
+            color: $color1;
+            border: 4px double $color1;
+          }
+        }
+      }
+    }
+  }
+}

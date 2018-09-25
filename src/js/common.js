@@ -161,12 +161,13 @@ $(document).ready(function () {
         $('body').removeClass('color1 color2 color3 color4 color5').addClass($.cookie('blind-colors'));
     }
 
-    $('.a-colors a, .choose-colors a').click(function () {
+    $('.a-colors a, .a-collor a, .choose-colors a').click(function () {
         colors = $(this).attr('rel');
         $.cookie('blind-colors', colors, {path: '/'});
         set_colors();
         return false;
     });
+
 
     function set_font_family() {
         $('body').removeClass('serif sans-serif roboto').addClass($.cookie('blind-font'));

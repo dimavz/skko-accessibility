@@ -187,7 +187,7 @@
         position: absolute;
         right: 0;
         top: 41px;
-        width: 883px;
+        //width: 883px;
         z-index: 100;
         padding: 13px 21px 23px 21px;
         color: $color2;
@@ -317,10 +317,10 @@
             align-items: center;
             height: 40px;
             padding: 10px;
-            background-color: $color2;
-            color: $color1;
+            background-color: $color1;
+            color: $color2;
             margin-right: 10px;
-            border: 4px double $color1;
+            border: 4px double $color2;
           }
 
           .default{
@@ -328,10 +328,10 @@
             align-items: center;
             height: 40px;
             padding: 10px;
-            background-color: $color2;
-            color: $color1;
+            background-color: $color1;
+            color: $color2;
             margin-right: 10px;
-            border: 4px double $color1;
+            border: 4px double $color2;
           }
         }
       }
