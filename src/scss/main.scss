@@ -8,17 +8,67 @@ html, body {
   @include font-default;
 }
 
-body{
+body {
   background-color: $green;
+
+  &.fontsize-small {
+
+    a.a-fontsize-small {
+      background-position: 0px -31px !important;
+    }
+  }
+
+  &.fontsize-normal {
+    a.a-fontsize-normal {
+      background-position: -20px -31px !important;
+    }
+  }
+
+  &.fontsize-big {
+    a.a-fontsize-big {
+      background-position:-46px -31px !important;
+    }
+  }
+
+  &.color1{
+    background-color: $color1 !important;
+
+    .a-color1{
+      background-position:0 -31px !important;
+    }
+  }
+
+  &.color2{
+    background-color: $color2 !important;
+
+    .a-color2{
+      background-position:-26px -31px !important;
+    }
+  }
+
+  &.color3{
+    background-color: $color3 !important;
+    .a-color3{
+      background-position:100% -31px !important;
+    }
+  }
+
+  &.imageson{
+    .a-images a {
+      background-position: 0 -27px;
+    }
+  }
+
+
 }
 
-a{
+a {
   text-decoration: none;
-  &.active{
+  &.active {
     color: $yellow;
   }
 }
 
-ul{
+ul {
   @include clear-list;
 }

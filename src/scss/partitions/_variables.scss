@@ -1,4 +1,5 @@
 //Цвета
+$color-panel:#ECECEC;
 $grey: #43484C;
 $yellow: yellow;
 $green: #396B62; //$grey;
@@ -7,12 +8,23 @@ $green2: #449d44;
 $green3:#06fc23;
 $marine:#33FFCC;
 $white: #fff;
-$blue:#31B0D5;
-$black:#1d1d1d;
+$blue: #31B0D5;
+$black:black;
 $orange: #EC971F;
 $red:red;
 $transparent:transparent;
+$panel-link-color: #000;
+
+  /*Цвета фона*/
+$color1:white;
+$color2:black;
+$color3:#9CD6FF;
+
 
 //Шрифты
 $font-family:"Roboto", sans-serif;
 $font-size: 16px;
+$font-weight: normal;
+$fs_small: 16px;
+$fs_normal: 20px;
+$fs_big: 24px;

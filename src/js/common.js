@@ -116,4 +116,17 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// Панель для слабовидящих
+    //Перелючатель изображений
+    $('.a-images a').click(function() {
+        images = $(this).attr('rel');
+        $('body').toggleClass('imageson').toggleClass('imagesoff');
+        return false;
+    });
+    //Открытие/Закрытие настроек панели
+    $('.a-settings, .closepopped').click(function() {
+        $('.popped').slideToggle('slow');
+        return false;
+    });
+
 });

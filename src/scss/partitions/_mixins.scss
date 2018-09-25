@@ -9,6 +9,12 @@
   @include clear;
   list-style: none;
 }
+//Выравнивание
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 //Шрифты
 @mixin font-default{
