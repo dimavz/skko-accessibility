@@ -132,10 +132,10 @@ $(document).ready(function () {
     });
 
     $('.default').click(function () {
-        $('body').removeClass().addClass('fontsize-normal color1 imageson spacing-small serif');
+        $('body').removeClass().addClass('fontsize-normal color1 imageson spacing-small roboto');
         $.cookie('blind-font-size', 'fontsize-normal', {path: '/'});
         $.cookie('blind-colors', 'color1', {path: '/'});
-        $.cookie('blind-font', 'serif', {path: '/'});
+        $.cookie('blind-font', 'roboto', {path: '/'});
         $.cookie('blind-spacing', 'spacing-small', {path: '/'});
 
         set_font_size();
@@ -169,7 +169,7 @@ $(document).ready(function () {
     });
 
     function set_font_family() {
-        $('body').removeClass('serif sans-serif').addClass($.cookie('blind-font'));
+        $('body').removeClass('serif sans-serif roboto').addClass($.cookie('blind-font'));
     }
 
     $('.font-family').click(function () {
