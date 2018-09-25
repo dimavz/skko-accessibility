@@ -335,6 +335,30 @@
           }
         }
       }
+
+      .a-normalversion{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        i{
+          margin-right: 10px;
+        }
+
+        a{
+          display: flex;
+          align-items: center;
+          color: $color2;
+
+
+
+          p{
+            @include clear;
+          }
+        }
+
+
+      }
     }
   }
 }
