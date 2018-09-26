@@ -23,14 +23,24 @@ $color4:darkblue;
 $color5:#F7F3D6;
 $color6:#765334; //#4d4b43;
 $color7:#a9e44d;
-$color8:#3b2716;
-
-
+$color8:#554131; //#3b2716;
 
 //Шрифты
-$font-family:"Roboto","Arial", sans-serif;
+$font-family: "Roboto","Arial","Times New Roman", sans-serif;
+$font-family1: "Roboto", sans-serif;
+$font-family2: "Arial", sans-serif;
+$font-family3: "Times New Roman", sans-serif;
 $font-size: 16px;
+$font-size1: 16px;
+$font-size2: 20px;
+$font-size3: 27px;
+$font-size4: 17px;
 $font-weight: normal;
 $fs_small: 16px;
 $fs_normal: 20px;
 $fs_big: 24px;
+
+//Междубуквенный интервал
+$letter-spacing-small:0px;
+$letter-spacing-normal:2px;
+$letter-spacing-big:5px;

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-     //Каруселька
+    //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
         loop: true,
@@ -55,11 +55,11 @@ $(document).ready(function () {
     });
 
     //При убирании мыши со слайдера запуск воспроизведения слайдов
-    owl.mouseout(function() {
+    owl.mouseout(function () {
         owl.trigger('play.owl.autoplay');
     });
     //При наведении мыши на слайдер приостановка воспроизведения слайдов
-    owl.mouseover(function() {
+    owl.mouseover(function () {
         owl.trigger('stop.owl.autoplay');
     });
 
@@ -112,6 +112,10 @@ $(document).ready(function () {
         $('body').removeClass('color1 color2 color3 color4 color5').addClass($.cookie('blind-colors'));
     }
 
+    function set_images() {
+        $('body').removeClass('imageson imagesoff').addClass($.cookie('blind-images'));
+    }
+
     $('.a-colors a, .a-collor a, .choose-colors a').click(function () {
         colors = $(this).attr('rel');
         $.cookie('blind-colors', colors, {path: '/'});
@@ -122,6 +126,14 @@ $(document).ready(function () {
 
     function set_font_family() {
         $('body').removeClass('serif sans-serif roboto').addClass($.cookie('blind-font'));
+        rel_cookie = $.cookie('blind-font');
+        $('.choose-font-family a').removeClass('active');
+        $('.choose-font-family a').each(
+            function(i,elem) {
+                if ($(elem).attr('rel')==rel_cookie){
+                    $(this).addClass('active');
+                }
+            });
     }
 
     $('.font-family').click(function () {
@@ -133,6 +145,14 @@ $(document).ready(function () {
 
     function set_letter_spacing() {
         $('body').removeClass('spacing-normal spacing-big spacing-small').addClass($.cookie('blind-spacing'));
+        rel_cookie = $.cookie('blind-spacing');
+        $('.choose-letter-spacing a').removeClass('active');
+        $('.choose-letter-spacing a').each(
+            function(i,elem) {
+                if ($(elem).attr('rel')==rel_cookie){
+                    $(this).addClass('active');
+                }
+            });
     }
 
     $('.letter-spacing').click(function () {
@@ -144,48 +164,95 @@ $(document).ready(function () {
 
     //Перелючатель изображений
     $('.a-images a').click(function () {
-        images = $(this).attr('rel');
+        //images = $(this).attr('rel');
         $('body').toggleClass('imageson').toggleClass('imagesoff');
+        is_imageson = $('body').hasClass("imageson");
+        is_imagesoff = $('body').hasClass("imagesoff");
+        if (is_imageson) {
+            $.cookie('blind-images', 'imageson', {path: '/'});
+        }
+        else if (is_imagesoff) {
+            $.cookie('blind-images', 'imagesoff', {path: '/'});
+        }
+        else {
+            $.cookie('blind-images', 'imageson', {path: '/'});
+        }
+        // alert($.cookie('blind-images'));
+
         return false;
     });
 
+    //Переключатель шрифтов
+    $('.choose-font-family a').click(function () {
+        $('.choose-font-family a').removeClass('active');
+        $(this).addClass('active');
+        font = $(this).attr('rel');
+        $.cookie('blind-font', font, {path: '/'});
+        set_font_family();
+        //alert(font);
+        return false;
+    });
+
+    //Переключатель интервала букв
+    $('.choose-letter-spacing a').click(function () {
+        $('.choose-letter-spacing a').removeClass('active');
+        $(this).addClass('active');
+        spacing = $(this).attr('rel');
+        $.cookie('blind-spacing', spacing, {path: '/'});
+        set_letter_spacing();
+        return false;
+    });
+
+    //Функция инициализации настроек
+    function init_settings() {
+        set_font_size();
+        set_colors();
+        set_images();
+        set_font_family();
+        set_letter_spacing();
+    }
+
+
     $('input[title!=""],textarea[title!=""]').hint();
 
-    if (! $.cookie('blind-font-size')) {
+    if (!$.cookie('blind-font-size')) {
         $.cookie('blind-font-size', 'fontsize-normal', {path: '/'});
     }
 
-    if (! $.cookie('blind-colors')) {
+    if (!$.cookie('blind-colors')) {
         $.cookie('blind-colors', 'color1', {path: '/'});
     }
 
-    if (! $.cookie('blind-font')) {
+    if (!$.cookie('blind-font')) {
         $.cookie('blind-font', 'roboto', {path: '/'});
     }
 
-    if (! $.cookie('blind-spacing')) {
+    if (!$.cookie('blind-spacing')) {
         $.cookie('blind-spacing', 'spacing-small', {path: '/'});
     }
 
-    set_font_size();
-    set_colors();
-    set_font_family();
-    set_letter_spacing();
+    if (!$.cookie('blind-images')) {
+        $.cookie('blind-images', 'imageson', {path: '/'});
+    }
+
+    //alert($.cookie('blind-images'));
+
+    init_settings();
 
 });
 
-jQuery.fn.hint = function() {
-    return this.each(function() {
+jQuery.fn.hint = function () {
+    return this.each(function () {
         var t = jQuery(this);
         var title = t.attr('title');
         if (title) {
-            t.blur(function() {
+            t.blur(function () {
                 if (t.val() == '') {
                     t.val(title);
                     t.addClass('blur');
                 }
             });
-            t.focus(function() {
+            t.focus(function () {
                 if (t.val() == title) {
                     t.val('');
                     t.removeClass('blur');

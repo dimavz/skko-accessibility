@@ -11,22 +11,65 @@ html, body {
 body {
   background-color: $green;
 
+  .accessibility {
+    letter-spacing: 0px;
+  }
+
+  //Установка шрифтов
+
+  &.roboto{
+    font-family: $font-family1;
+  }
+
+  &.sans-serif{
+    font-family: $font-family2;
+  }
+
+  &.serif{
+    font-family: $font-family3;
+
+    .accessibility {
+      font-size: $font-size4 !important;
+    }
+  }
+
+
   &.fontsize-small {
+
+    font-size:$font-size;
 
     a.a-fontsize-small {
       background-position: 0px -31px !important;
     }
+
+    .popped  {
+      font-size:$font-size;
+    }
   }
 
   &.fontsize-normal {
+
+    font-size:$font-size2;
+
     a.a-fontsize-normal {
       background-position: -20px -31px !important;
+    }
+
+    .popped  {
+      font-size:$font-size2;
     }
   }
 
   &.fontsize-big {
+
+    font-size:$font-size3;
+
     a.a-fontsize-big {
       background-position:-46px -31px !important;
+    }
+
+    .popped  {
+      font-size:$font-size3;
     }
   }
 
@@ -56,6 +99,27 @@ body {
   &.imageson{
     .a-images a {
       background-position: 0 -27px;
+    }
+  }
+
+  &.spacing-small {
+    letter-spacing:$letter-spacing-small;
+    .popped{
+      letter-spacing:$letter-spacing-small;
+    }
+  }
+
+  &.spacing-normal {
+    letter-spacing:$letter-spacing-normal;
+    .popped{
+      letter-spacing:$letter-spacing-normal;
+    }
+  }
+
+  &.spacing-big {
+    letter-spacing:$letter-spacing-big;
+    .popped{
+      letter-spacing:$letter-spacing-big;
     }
   }
 

@@ -16,6 +16,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: $font-size1;
 
     .settings {
       width: 1160px;
@@ -41,9 +42,6 @@
 
         p {
           @include clear;
-          font-family: $font-family;
-          font-size: $font-size;
-          font-weight: $font-weight;
 
           a {
             text-decoration: none;
@@ -93,9 +91,6 @@
         p {
           @include clear;
           margin-left: 10px;
-          font-family: $font-family;
-          font-size: $font-size;
-          font-weight: $font-weight;
 
           a {
             width: 26px;
@@ -138,7 +133,7 @@
       }
 
       .a-images {
-        display: flex;
+        @include flex-center;
         margin-left: 10px;
 
         p {
@@ -158,26 +153,23 @@
         }
       }
 
-      .a-settings{
-        display: flex;
+      .a-settings {
+        @include flex-center;
         margin-left: 10px;
 
-        a{
+        a {
           color: $color2;
           display: flex;
           align-items: center;
           text-decoration: none;
-          i{
+          i {
             margin-left: 10px;
             margin-right: 10px;
           }
-          p{
+          p {
             @include clear;
           }
         }
-
-
-
 
       }
 
@@ -185,75 +177,73 @@
         border: 2px solid #000;
         background: $color1;
         position: absolute;
-        right: 0;
+        right: 381px;
         top: 41px;
         //width: 883px;
         z-index: 100;
         padding: 13px 21px 23px 21px;
         color: $color2;
-        font-family: $font-family;
-        font-size: 20px;
-        font-weight: bold;
         display: none;
 
-        .choose-font-family{
+        .choose-font-family {
           margin-left: 10px;
 
           #roboto{
-            font-family: "Roboto";
-            padding: 5px;
-            background:$color2;
-            color:$color1;
-            border-radius: .3em;
+            font-family: $font-family1;
           }
-
           #sans-serif{
-            font-family: "Arial";
-            padding: 5px;
-            background:$color1;
-            color:$color2;
-            border-radius: .3em;
-            border: 1px solid $color2;
+            font-family: $font-family2;
+          }
+          #serif{
+            font-family: $font-family3;
           }
 
-          #serif{
-            font-family: "Times New Roman";
+          a {
             padding: 5px;
-            background:$color1;
-            color:$color2;
+            background: $color1;
+            color: $color2;
             border-radius: .3em;
             border: 1px solid $color2;
+
+            &.active {
+              padding: 5px;
+              background: $color2;
+              color: $color1;
+              border-radius: .3em;
+            }
           }
         }
-        .choose-letter-spacing{
+        .choose-letter-spacing {
           margin-left: 10px;
 
-          #spacing-small{
-            padding: 5px;
-            background:$color2;
-            color:$color1;
-            border-radius: .3em;
+          #spacing-small {
+            letter-spacing: 0px;
           }
 
-          #spacing-normal{
-            padding: 5px;
-            background:$color1;
-            color:$color2;
-            border-radius: .3em;
-            border: 1px solid $color2;
+          #spacing-normal {
             letter-spacing: 2px;
           }
 
-          #spacing-big{
-            padding: 5px;
-            background:$color1;
-            color:$color2;
-            border-radius: .3em;
-            border: 1px solid $color2;
+          #spacing-big {
             letter-spacing: 5px;
           }
+
+          a {
+            padding: 5px;
+            background: $color1;
+            color: $color2;
+            border-radius: .3em;
+            border: 1px solid $color2;
+
+            &.active {
+              padding: 5px;
+              background: $color2;
+              color: $color1;
+              border-radius: .3em;
+            }
+          }
         }
-        .choose-colors{
+        .choose-colors {
           margin-left: 10px;
 
           #color1 a {
@@ -307,12 +297,12 @@
           }
         }
 
-        .saveit{
+        .saveit {
           display: flex;
           justify-content: flex-end;
           margin-top: 10px;
 
-          .closepopped{
+          .closepopped {
             display: flex;
             align-items: center;
             height: 40px;
@@ -323,7 +313,7 @@
             border: 4px double $color2;
           }
 
-          .default{
+          .default {
             display: flex;
             align-items: center;
             height: 40px;
@@ -336,25 +326,23 @@
         }
       }
 
-      .a-normalversion{
-        display: flex;
-        align-items: center;
+      .a-normalversion {
+        @include flex-center;
         margin-left: 10px;
 
-        i{
+        i {
           margin-right: 10px;
         }
 
-        a{
+        a {
           display: flex;
           align-items: center;
           color: $color2;
 
-          p{
+          p {
             @include clear;
           }
         }
-
 
       }
     }
