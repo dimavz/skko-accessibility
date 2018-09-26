@@ -170,9 +170,15 @@ $(document).ready(function () {
         is_imagesoff = $('body').hasClass("imagesoff");
         if (is_imageson) {
             $.cookie('blind-images', 'imageson', {path: '/'});
+            //$('img').css({'border':'2px solid red'});
+            $('img').css({'display':'block'});
+            // $('img').css({'visibility':'visible'});
         }
         else if (is_imagesoff) {
             $.cookie('blind-images', 'imagesoff', {path: '/'});
+            //$('img').css({'border':'none'});
+            $('img').css({'display':'none'});
+            // $('img').css({'visibility':'hidden'});
         }
         else {
             $.cookie('blind-images', 'imageson', {path: '/'});
