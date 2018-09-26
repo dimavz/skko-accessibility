@@ -1,0 +1,120 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+body.color5 {
+  background-color: $color8;
+  color: $color7;
+
+  #header .accessibility {
+
+    background-color: $color8;
+
+    .settings {
+
+      .inputbox {
+        color: $color8;
+      }
+
+      .a-fontsize {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        a {
+          background-image: url(../images/icons/mint/mint_fontsize.png);
+        }
+      }
+
+      .a-images {
+        display: flex;
+        margin-left: 10px;
+
+        a {
+          background-image: url(../images/icons/mint/mint_images.png);
+        }
+      }
+
+      .a-settings{
+        a{
+          color: $color7;
+        }
+
+      }
+
+      .a-normalversion{
+        a{
+          color: $color7;
+        }
+      }
+
+      .popped{
+        background-color: $color8;
+        color: $color7;
+
+
+        .choose-font-family{
+          a{
+            &#roboto{
+              border: 1px solid $color8;
+              background-color: $color7;
+              color: $color8;
+            }
+
+            &#sans-serif{
+              border: 1px solid $color7;
+              background-color: $color8;
+              color: $color7;
+            }
+
+            &#serif{
+              border: 1px solid $color7;
+              background-color: $color8;
+              color: $color7;
+            }
+
+          }
+        }
+
+        .choose-letter-spacing{
+          a{
+            &#spacing-small{
+              border: 1px solid $color8;
+              background-color: $color7;
+              color: $color8;
+            }
+
+            &#spacing-normal{
+              border: 1px solid $color7;
+              background-color: $color8;
+              color: $color7;
+            }
+
+            &#spacing-big{
+              border: 1px solid $color7;
+              background-color: $color8;
+              color: $color7;
+            }
+
+          }
+        }
+
+        .saveit{
+          .closepopped{
+            background-color: $color8;
+            color: $color7;
+            border: 4px double $color7;
+          }
+
+          .default{
+            background-color: $color8;
+            color: $color7;
+            border: 4px double $color7;
+          }
+        }
+      }
+    }
+  }
+}
