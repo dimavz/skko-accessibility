@@ -60,48 +60,58 @@ body.color4 {
         }
 
         .choose-font-family{
-          a{
-            &#roboto{
-              border: 1px solid $color5;
-              background-color: $color6;
+          #roboto{
+            font-family: $font-family1;
+          }
+          #sans-serif{
+            font-family: $font-family2;
+          }
+          #serif{
+            font-family: $font-family3;
+          }
+
+          a {
+            padding: 5px;
+            background: $color5;
+            color: $color6;
+            border-radius: .3em;
+            border: 1px solid $color6;
+
+            &.active {
+              padding: 5px;
+              background: $color6;
               color: $color5;
+              border-radius: .3em;
             }
-
-            &#sans-serif{
-              border: 1px solid $color6;
-              background-color: $color5;
-              color: $color6;
-            }
-
-            &#serif{
-              border: 1px solid $color6;
-              background-color: $color5;
-              color: $color6;
-            }
-
           }
         }
 
         .choose-letter-spacing{
-          a{
-            &#spacing-small{
-              border: 1px solid $color5;
-              background-color: $color6;
+          #spacing-small {
+            letter-spacing: 0px;
+          }
+
+          #spacing-normal {
+            letter-spacing: 2px;
+          }
+
+          #spacing-big {
+            letter-spacing: 5px;
+          }
+
+          a {
+            padding: 5px;
+            background: $color5;
+            color: $color6;
+            border-radius: .3em;
+            border: 1px solid $color6;
+
+            &.active {
+              padding: 5px;
+              background: $color6;
               color: $color5;
+              border-radius: .3em;
             }
-
-            &#spacing-normal{
-              border: 1px solid $color6;
-              background-color: $color5;
-              color: $color6;
-            }
-
-            &#spacing-big{
-              border: 1px solid $color6;
-              background-color: $color5;
-              color: $color6;
-            }
-
           }
         }
 
