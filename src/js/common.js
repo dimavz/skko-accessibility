@@ -1,42 +1,6 @@
 $(document).ready(function () {
 
-    //Таймер обратного отсчета
-    //Документация: http://keith-wood.name/countdown.html
-    //<div class="countdown" date-time="2015-01-07"></div>
-    var austDay = new Date($(".countdown").attr("date-time"));
-    $(".countdown").countdown({until: austDay, format: 'yowdHMS'});
-
-    //Попап менеджер FancyBox
-    //Документация: http://fancybox.net/howto
-    //<a class="fancybox"><img src="image.jpg" /></a>
-    //<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
-    $(".fancybox").fancybox();
-
-    //Навигация по Landing Page
-    //$(".top_mnu") - это верхняя панель со ссылками.
-    //Ссылки вида <a href="#contacts">Контакты</a>
-    $(".top_mnu").navigation();
-
-    //Добавляет классы дочерним блокам .block для анимации
-    //Документация: http://imakewebthings.com/jquery-waypoints/
-    $(".block").waypoint(function (direction) {
-        if (direction === "down") {
-            $(".class").addClass("active");
-        } else if (direction === "up") {
-            $(".class").removeClass("deactive");
-        }
-        ;
-    }, {offset: 100});
-
-    //Плавный скролл до блока .div по клику на .scroll
-    //Документация: https://github.com/flesler/jquery.scrollTo
-    $("a.scroll").click(function () {
-        $.scrollTo($(".div"), 800, {
-            offset: -90
-        });
-    });
-
-    //Каруселька
+     //Каруселька
     //Документация: https://owlcarousel2.github.io/OwlCarousel2/
     var owl = $('.owl-carousel').owlCarousel({
         loop: true,
@@ -90,6 +54,15 @@ $(document).ready(function () {
         owl.trigger('prev.owl.carousel', [300]);
     });
 
+    //При убирании мыши со слайдера запуск воспроизведения слайдов
+    owl.mouseout(function() {
+        owl.trigger('play.owl.autoplay');
+    });
+    //При наведении мыши на слайдер приостановка воспроизведения слайдов
+    owl.mouseover(function() {
+        owl.trigger('stop.owl.autoplay');
+    });
+
     //Кнопка "Наверх"
     //Документация:
     //http://api.jquery.com/scrolltop/
@@ -101,30 +74,8 @@ $(document).ready(function () {
         return false;
     });
 
-    //Аякс отправка форм
-    //Документация: http://api.jquery.com/jquery.ajax/
-    $("form").submit(function () {
-        $.ajax({
-            type: "GET",
-            url: "mail.php",
-            data: $("form").serialize()
-        }).done(function () {
-            alert("Спасибо за заявку!");
-            setTimeout(function () {
-                $.fancybox.close();
-            }, 1000);
-        });
-        return false;
-    });
-
     // *** Панель для слабовидящих ***//
 
-    //Перелючатель изображений
-    $('.a-images a').click(function () {
-        images = $(this).attr('rel');
-        $('body').toggleClass('imageson').toggleClass('imagesoff');
-        return false;
-    });
     //Открытие/Закрытие настроек панели
     $('.a-settings, .closepopped').click(function () {
         $('.popped').slideToggle('slow');
@@ -191,5 +142,57 @@ $(document).ready(function () {
         return false;
     });
 
+    //Перелючатель изображений
+    $('.a-images a').click(function () {
+        images = $(this).attr('rel');
+        $('body').toggleClass('imageson').toggleClass('imagesoff');
+        return false;
+    });
+
+    $('input[title!=""],textarea[title!=""]').hint();
+
+    if (! $.cookie('blind-font-size')) {
+        $.cookie('blind-font-size', 'fontsize-normal', {path: '/'});
+    }
+
+    if (! $.cookie('blind-colors')) {
+        $.cookie('blind-colors', 'color1', {path: '/'});
+    }
+
+    if (! $.cookie('blind-font')) {
+        $.cookie('blind-font', 'roboto', {path: '/'});
+    }
+
+    if (! $.cookie('blind-spacing')) {
+        $.cookie('blind-spacing', 'spacing-small', {path: '/'});
+    }
+
+    set_font_size();
+    set_colors();
+    set_font_family();
+    set_letter_spacing();
 
 });
+
+jQuery.fn.hint = function() {
+    return this.each(function() {
+        var t = jQuery(this);
+        var title = t.attr('title');
+        if (title) {
+            t.blur(function() {
+                if (t.val() == '') {
+                    t.val(title);
+                    t.addClass('blur');
+                }
+            });
+            t.focus(function() {
+                if (t.val() == title) {
+                    t.val('');
+                    t.removeClass('blur');
+                }
+            });
+            t.blur();
+        }
+    });
+};
+
