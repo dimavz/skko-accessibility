@@ -114,6 +114,16 @@ $(document).ready(function () {
 
     function set_images() {
         $('body').removeClass('imageson imagesoff').addClass($.cookie('blind-images'));
+
+        imageson = $('body').hasClass("imageson");
+
+        if (imageson) {
+            $('img').css({'display':'block'});
+        }
+        else{
+            $('img').css({'display':'none'});
+        }
+        return false;
     }
 
     $('.a-colors a, .a-collor a, .choose-colors a').click(function () {
@@ -164,26 +174,26 @@ $(document).ready(function () {
 
     //Перелючатель изображений
     $('.a-images a').click(function () {
-        //images = $(this).attr('rel');
+
         $('body').toggleClass('imageson').toggleClass('imagesoff');
-        is_imageson = $('body').hasClass("imageson");
-        is_imagesoff = $('body').hasClass("imagesoff");
-        if (is_imageson) {
+
+        images_on = $('body').hasClass("imageson");
+        images_off = $('body').hasClass("imagesoff");
+
+        if (images_on) {
             $.cookie('blind-images', 'imageson', {path: '/'});
-            //$('img').css({'border':'2px solid red'});
             $('img').css({'display':'block'});
-            // $('img').css({'visibility':'visible'});
+            return false;
         }
-        else if (is_imagesoff) {
+        else if (images_off) {
             $.cookie('blind-images', 'imagesoff', {path: '/'});
-            //$('img').css({'border':'none'});
             $('img').css({'display':'none'});
-            // $('img').css({'visibility':'hidden'});
+            return false;
         }
         else {
             $.cookie('blind-images', 'imageson', {path: '/'});
+            return false;
         }
-        // alert($.cookie('blind-images'));
 
         return false;
     });
@@ -219,7 +229,7 @@ $(document).ready(function () {
     }
 
 
-    $('input[title!=""],textarea[title!=""]').hint();
+    // $('input[title!=""],textarea[title!=""]').hint();
 
     if (!$.cookie('blind-font-size')) {
         $.cookie('blind-font-size', 'fontsize-normal', {path: '/'});
@@ -247,25 +257,25 @@ $(document).ready(function () {
 
 });
 
-jQuery.fn.hint = function () {
-    return this.each(function () {
-        var t = jQuery(this);
-        var title = t.attr('title');
-        if (title) {
-            t.blur(function () {
-                if (t.val() == '') {
-                    t.val(title);
-                    t.addClass('blur');
-                }
-            });
-            t.focus(function () {
-                if (t.val() == title) {
-                    t.val('');
-                    t.removeClass('blur');
-                }
-            });
-            t.blur();
-        }
-    });
-};
+// jQuery.fn.hint = function () {
+//     return this.each(function () {
+//         var t = jQuery(this);
+//         var title = t.attr('title');
+//         if (title) {
+//             t.blur(function () {
+//                 if (t.val() == '') {
+//                     t.val(title);
+//                     t.addClass('blur');
+//                 }
+//             });
+//             t.focus(function () {
+//                 if (t.val() == title) {
+//                     t.val('');
+//                     t.removeClass('blur');
+//                 }
+//             });
+//             t.blur();
+//         }
+//     });
+// };
 
