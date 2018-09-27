@@ -5,6 +5,13 @@
 body.color2 {
   background-color: $color2;
   color: $color1;
+  a{
+    color: $white;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 
   #header .accessibility {
 

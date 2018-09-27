@@ -3,13 +3,13 @@
 @import "partitions/media";
 
 #slider {
-  background-color: $green;
+  //background-color: $green;
 
   .slider_wrapper{
     position: relative;
     height: 180px;
-    background-color:$white;
-    border: 3px solid $green-light;
+    //background-color:$white;
+    border: 1px solid;
     border-radius: 3px;
     padding: 10px;
     @include shadow_block;
@@ -73,12 +73,11 @@
           height: 174px;
           cursor: pointer;
           //background-color:$green-light;
-          background-image: linear-gradient(to left,rgba(0, 0, 0, 0) 0px, rgba(78, 198, 152, 0.5) 100%);
-          //opacity: .5;
+          //background-image: linear-gradient(to left,rgba(0, 0, 0, 0) 0px, rgba(78, 198, 152, 0.5) 100%);
 
           &:hover{
             i{
-              color: $yellow;
+              //color: $yellow;
               @include shadow_text;
             }
           }
@@ -88,7 +87,7 @@
             top: 70px;
             left: 0px;
             z-index: 101;
-            color: $green-light;
+            //color: $green-light;
           }
         }
 
@@ -100,12 +99,12 @@
           height: 174px;
           cursor: pointer;
           //background-color: $green-light;
-          background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(78, 198, 152, 0.5) 100%);
+          //background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(78, 198, 152, 0.5) 100%);
           //opacity: .5;
 
           &:hover{
             i{
-              color: $yellow;
+              //color: $yellow;
               @include shadow_text;
             }
           }
@@ -115,7 +114,7 @@
             top: 70px;
             right: 0px;
             z-index: 101;
-            color: $green-light;
+            //color: $green-light;
           }
         }
       }

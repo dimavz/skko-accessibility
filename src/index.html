@@ -103,67 +103,6 @@
         </div>
 
     </div>
-    <nav class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="menu_icon visible-xs-block">
-                <div class="wrap_icon">
-                    <i class="fa fa-bars" data-toggle="collapse" data-target="#mob_menu" aria-hidden="true"></i>
-                    <div class="run_string">
-                        <marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, saepe.
-                        </marquee>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper_nav hidden-xs">
-                <div class="home_icon">
-                    <a class="active" href="/">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <ul>
-                    <li><a class="active" href="#">Главная</a></li>
-                    <li class="dropdown">
-                        <span>
-                            О системе
-                        </span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <ul>
-                            <li><a href="#">Описание СККО</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown active">
-                        <span>
-                            Владельцам
-                        </span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <ul>
-                            <li><a href="#">Порядок заключения договора</a></li>
-                            <li><a href="#">Документы</a></li>
-                            <li><a class="active" href="#">График подключения к СККО</a></li>
-                            <li><a href="#">Тарифы и способы оплаты</a></li>
-                            <li><a href="#">Вопросы/Ответы</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <span>
-                            Публикации
-                        </span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <ul>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">Нормативные правовые акты</a></li>
-                            <li><a href="#">Разъяснения МНС</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Цто</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Наши партнёры</a></li>
-                </ul>
-            </div>
-        </div><!-- /.container -->
-    </nav><!--end navbar-->
     <nav class="mobile_menu visible-xs-block">
         <div class="container">
             <div id="mob_menu" class="collapse">
@@ -232,14 +171,19 @@
                     <span class="visible-xs">Управляйте своим бизнесом через Internet</span>
                 </div><!-- end site_title-->
                 <div class="buttons">
-                    <a href="https://skko.by">
-                        <i class="fa fa-key" aria-hidden="true"></i>
-                        <span>Войти с ЭЦП</span>
-                    </a>
-                    <a href="http://inbox.skko.by/">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>Почта</span>
-                    </a>
+                    <div class="key">
+                        <i class="fa fa-key fa-lg" aria-hidden="true"></i>
+                        <a href="https://skko.by">
+                            <span>Войти с ЭЦП</span>
+                        </a>
+                    </div>
+                    <div class="mail">
+                        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                        <a href="http://inbox.skko.by/">
+                            <span>Почта</span>
+                        </a>
+                    </div>
+
                 </div>
             </div><!-- end header_content-->
             <div class="meta_info hidden-xs">
@@ -251,7 +195,7 @@
                     <span>Управляйте своим бизнесом через Internet</span>
                 </div>
             </div><!-- end meta_info-->
-            <div class="panel hidden-xs">
+            <div class="info_panel hidden-xs">
                 <div class="icons">
                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
@@ -272,6 +216,67 @@
             </div><!-- end panel-->
         </div><!--end container-->
     </div><!-- end wrap_header-->
+    <nav class="navbar">
+        <div class="container">
+            <div class="menu_icon visible-xs-block">
+                <div class="wrap_icon">
+                    <i class="fa fa-bars" data-toggle="collapse" data-target="#mob_menu" aria-hidden="true"></i>
+                    <div class="run_string">
+                        <marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Quaerat, saepe.
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper_nav hidden-xs">
+                <div class="home_icon">
+                    <a class="active" href="/">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <ul>
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li class="dropdown">
+                        <span>
+                            О системе
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Описание СККО</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <span>
+                            Владельцам
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Порядок заключения договора</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a class="active" href="#">График подключения к СККО</a></li>
+                            <li><a href="#">Тарифы и способы оплаты</a></li>
+                            <li><a href="#">Вопросы/Ответы</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>
+                            Публикации
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Нормативные правовые акты</a></li>
+                            <li><a href="#">Разъяснения МНС</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Цто</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Наши партнёры</a></li>
+                </ul>
+            </div>
+        </div><!-- /.container -->
+    </nav><!--end navbar-->
 
 </header>
 <section id="slider">
@@ -440,8 +445,12 @@
 </section>
 <section id="content">
     <div class="container">
-        <div class="row">
-            Контент
+        <div class="wrap_content">
+            <div class="row">
+                <div class="col-md-12">
+                    Контент
+                </div>
+            </div>
         </div>
     </div>
 </section>

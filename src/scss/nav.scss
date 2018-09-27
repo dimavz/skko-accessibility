@@ -3,17 +3,15 @@
 @import "partitions/media";
 
 #header {
-  @include shadow_block;
+  //@include shadow_block;
 
   .navbar {
-    background-color: $grey;
-    margin-top: 40px;
-    margin-bottom: 0px;
-    @include shadow_block;
 
-    .active {
-      color: $yellow;
-    }
+    //margin-top: 40px;
+    margin-bottom: 10px;
+    //background-color: $white;
+    //@include shadow_block;
+    z-index: 1000;
 
     .menu_icon {
 
@@ -26,21 +24,21 @@
         i {
           cursor: pointer;
           font-size: 24px;
-          color: $white;
+          //color: $white;
           width: 30px;
           height: 30px;
           margin-left: 5px;
           margin-right: 25px;
-          @include shadow_text;
+          //@include shadow_text;
 
         }
 
         .run_string {
-          color: $green3;
+          //color: $green3;
           height: 30px;
 
           span {
-            color: $yellow;
+            //color: $yellow;
             text-transform: uppercase;
           }
         }
@@ -55,33 +53,36 @@
 
       .home_icon {
         height: 100%;
-        color: $white;
+        //color: $white;
         font-size: 22px;
         display: flex;
         align-items: center;
         justify-content: center;
         padding-bottom: 2px;
         margin-left: 5px;
+
         @include devices-max-width-1200px {
           font-size: 20px;
         }
         @include devices-max-width-992px {
           font-size: 18px;
-          //height: 30px;
-          //width: 30px;
         }
 
         a {
-          color: $white;
+          //color: $color-link-grey;
 
           &.active {
-            color: $yellow;
+            //color: $black;
+          }
+          &:hover {
+            text-decoration: underline;
           }
         }
 
         &:hover {
           a {
-            color: $yellow;
+            //color: $color-link-grey;
+
           }
         }
       }
@@ -91,6 +92,8 @@
         display: flex;
         align-items: center;
         padding-left: 15px;
+        background-color: inherit;
+
         @include devices-max-width-1200px {
           padding-left: 10px;
         }
@@ -102,8 +105,9 @@
         > li {
           padding-right: 25px;
           text-transform: uppercase;
-          color: $white;
+          //color: $white;
           display: flex;
+
           @include devices-max-width-1200px {
             padding-right: 15px;
           }
@@ -111,15 +115,19 @@
             padding-right: 10px;
           }
 
+          span, i{
+            //color: $color-link-grey;
+          }
+
           &:first-child {
             padding-left: 3px;
           }
 
           & a {
-            color: $white;
+            //color: $color-link-grey;
             text-decoration: none;
-            font-size: 18px;
-            @include shadow_text;
+            max-font-size: 18px;
+            //@include shadow_text;
             @include devices-max-width-1200px {
               font-size: 16px;
             }
@@ -128,13 +136,15 @@
             }
 
             &:hover, &.active {
-              color: $yellow;
+              //color: $black;
+              text-decoration: underline;
             }
 
           }
 
           &.active {
-            color: $yellow;
+            //color: $black;
+            text-decoration: underline;
           }
 
           &.dropdown {
@@ -143,8 +153,8 @@
             position: relative;
 
             & span {
-              font-size: 18px;
-              @include shadow_text;
+              //font-size: 18px;
+              //@include shadow_text;
               cursor: pointer;
 
               @include devices-max-width-1200px {
@@ -155,7 +165,7 @@
               }
 
               &:hover {
-                color: $yellow;
+                //color: $black;
               }
             }
 
@@ -172,13 +182,14 @@
 
             &:hover {
               i {
-                color: $yellow;
+                //color: $black;
               }
               ul {
                 visibility: visible;
                 top: 39px;
-                opacity: 1;
-                background-color: lighten($grey,5%);
+                //opacity: 1;
+                //background-color: lighten($white,5%);
+                background-color: inherit;
                 @include devices-max-width-1200px{
                   top: 37px;
                 }
@@ -198,7 +209,7 @@
               top: 39px;
               left: 0;
               min-width: 300px;
-              background-color: $grey;
+              background-color: inherit;
               z-index: 10;
               visibility: hidden;
               transition: all .3s;
@@ -212,19 +223,19 @@
               > li {
                 padding: 5px 15px;
                 cursor: pointer;
-                border-bottom: 1px dotted $white;
+                border-bottom: 1px dotted;
 
                 &:hover {
 
                   a {
-                    color: $yellow;
+                    //color: $black;
                   }
                 }
 
                 a {
                   text-transform: none;
                   &.active {
-                    color: $yellow;
+                    //color: $black;
                   }
                 }
               }
@@ -235,7 +246,7 @@
     }
   }
   .mobile_menu {
-    background-color: lighten($grey, 3%);
+    //background-color: lighten($grey, 3%);
     width: 100%;
 
     .search {
@@ -243,17 +254,17 @@
     }
 
     .btn-success {
-      background-color: $green;
+      //background-color: $green;
 
       &:hover {
-        color: $yellow;
-        border: 1px solid $yellow;
+        //color: $black;
+        border: 1px solid;
       }
     }
 
     & ul {
       padding: 2px;
-      background-color: $white;
+      background-color: inherit;
       margin-top: 10px;
       margin-bottom: 10px;
       border-radius: 3px;
@@ -261,8 +272,8 @@
 
       & li {
         padding: 5px 15px;
-        background-color: $green;
-        border-bottom: 1px dotted $white;
+        //background-color: $white;
+        border-bottom: 1px dotted;
         width: 100%;
         cursor: pointer;
         text-transform: uppercase;
@@ -274,11 +285,12 @@
         & a {
           display: block;
           width: 100%;
-          color: $white;
+          //color: $color-link-grey;
           text-decoration: none;
 
           &:hover {
-            color: $yellow;
+            //color: $black;
+            text-decoration: underline;
           }
         }
 
@@ -288,51 +300,51 @@
           align-items: center;
 
           &.active {
-            color: $yellow;
+            //color: $black;
+            text-decoration: underline;
             span, i {
-              color: $yellow;
+              //color: $black;
             }
           }
 
           &:hover {
-            color: $yellow;
+            //color: $black;
+            text-decoration: underline;
 
             & span {
-              color: $yellow;
+              //color: $black;
             }
 
             & i {
-              color: $yellow;
+              //color: $black;
             }
           }
 
           & span {
-            color: $white;
+            //color: $black;
 
-            //&.active{
-            //  color: $yellow;
-            //}
           }
           & i {
-            color: $white;
+            //color: $black;
             font-size: 22px;
           }
         }
 
         & ul {
           @include clear-list;
-          background-color: $green-light;
+          background-color: inherit;
           padding: 2px;
           margin-top: 5px;
 
           & li {
-            background-color: $green-light;
+            background-color: inherit;
 
             & a {
               font-size: 12px;
 
               &.active {
-                color: $yellow;
+                //color: $black;
+                text-decoration: underline;
               }
             }
 

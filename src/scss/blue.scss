@@ -6,6 +6,14 @@ body.color3 {
   background-color: $color3;
   color: $color4;
 
+  a{
+    color: $color4;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
   #header .accessibility {
 
     background-color: $color3;

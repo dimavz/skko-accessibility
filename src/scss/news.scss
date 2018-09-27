@@ -3,23 +3,23 @@
 @import "partitions/media";
 
 #news {
-  background-color: $green;
+  //background-color: $green;
 
   .wrap_news {
     @include clear;
-    border: 3px solid $green-light;
+    border: 1px solid;
     border-radius: 3px;
-    background-color: $white;
+    //background-color: $white;
     padding: 10px;
     margin-bottom: 10px;
     //height: 400px;
 
     h1 {
       @include clear;
-      color: $green-light;
+      //color: $green-light;
       font-size: 22px;
       padding: 5px 20px;
-      font-family: 'RobotoRegular', sans-serif;
+      //font-family: 'RobotoRegular', sans-serif;
       text-transform: uppercase;
     }
 
@@ -37,7 +37,7 @@
 
           .title {
 
-            border-bottom: 2px dotted $green;
+            border-bottom: 2px dotted;
           }
           .text {
             visibility: visible;
@@ -51,7 +51,7 @@
         width: 100%;
         height: 300px;
         overflow: hidden;
-        border: 1px solid $grey;
+        border: 1px solid;
 
         img {
           width: 100%;
@@ -68,7 +68,7 @@
         left: 0;
         height: 100px;
         overflow: hidden;
-        background-color: $white;
+        background-color: inherit;
         transition: all .8s;
 
         .title {
@@ -89,16 +89,16 @@
             @include clear;
             padding-top: 5px;
             font-size: 20px;
-            color: darken($grey, 20%);
+            //color: darken($grey, 20%);
             height: 50px;
             overflow: hidden;
 
             a {
-              color: darken($grey, 20%);
+              //color: darken($grey, 20%);
               text-decoration: none;
 
               &:hover {
-                color: $green;
+                //color: $green;
               }
             }
           }
@@ -111,7 +111,8 @@
           overflow: hidden;
 
           a {
-            color: $green-light;
+            //color: $green-light;
+            text-decoration: underline;
           }
         }
 
@@ -120,34 +121,36 @@
           margin-left: 10px;
           padding: 3px;
           //padding-left: 5px;
-          background-color: $green;
+          background-color: inherit;
           width: 130px;
           border-radius: 5px;
+          @include shadow_block;
+          border: 1px solid;
           a {
             display: flex;
             align-items: center;
             text-decoration: none;
             justify-content: space-around;
-            color: $white;
+            //color: $white;
 
             &:hover {
-              color: $yellow;
+              //color: $yellow;
+              text-decoration: underline;
 
               i {
-                color: $yellow;
+                color: inherit;
               }
             }
 
             i {
               margin-top: 3px;
               padding-right: 5px;
-              color: $green-light;
-              font-size: 16px;
-              color: $white;
+              color: inherit;
+              //font-size: 16px;
 
             }
             span {
-              font-size: 16px;
+              //font-size: 16px;
             }
           }
 
@@ -206,7 +209,7 @@
           padding: 3px;
           width: 200px;
           height: 140px;
-          border: 1px solid $grey;
+          border: 1px solid;
           margin-right: 15px;
           transition: all .8s;
 
@@ -223,7 +226,7 @@
             position: absolute;
             top: 0px;
             left: 220px;
-            font-size: 16px;
+            //font-size: 16px;
             transition: all .8s;
           }
           .title {
@@ -233,13 +236,13 @@
             transition: all .8s;
             h3 {
               @include clear;
-              font-size: 20px;
+              //font-size: 20px;
 
               a {
-                color: darken($grey, 20%);
+                //color: darken($grey, 20%);
                 text-decoration: none;
                 &:hover {
-                  color: $green;
+                  //color: $green;
                 }
               }
             }
@@ -262,19 +265,21 @@
             left: 5px;
             visibility: hidden;
             transition: all .8s;
-            background-color:$green;
+            background-color:inherit;
+            border: 1px solid;
             border-radius: 5px;
             width: 130px;
             @include shadow_block;
 
             a{
               text-decoration: none;
-              color: $white;
+              //color: $white;
               display: flex;
               align-items: center;
               justify-content: space-around;
               &:hover{
-                color: $yellow;
+                color: inherit;
+                text-decoration: underline;
               }
               i{
                 margin-top: 3px;
@@ -295,17 +300,20 @@
       button{
 
         padding: 5px 10px;
-        background-color: $green;
+        background-color: inherit;
+        border: 1px solid;
         border-radius: 5px;
         &:hover{
-          color: $yellow;
-          a{color: $yellow}
+          color: inherit;
           @include shadow_block;
+          a{
+            text-decoration: underline;
+          }
         }
         a{
-          color: $white;
+          color: inherit;
           &:hover{
-            color: $yellow;
+             text-decoration: underline;
           }
         }
       }

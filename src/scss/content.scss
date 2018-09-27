@@ -1,0 +1,13 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+#content {
+  //background-color: $green;
+
+  .wrap_content {
+    border: 1px solid;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+}

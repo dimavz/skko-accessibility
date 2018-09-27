@@ -4,8 +4,9 @@
 
 #header {
   .wrap_header{
-    background-color: $green-light;
-    margin-top: 90px;
+    //background-color: $green-light;
+    margin-top: 40px;
+    margin-bottom: 10px;
 
     .container{
       display: flex;
@@ -29,16 +30,19 @@
           align-items: center;
           justify-content: center;
           width: 240px;
+
           @include devices-max-width-992px{
             width: 180px;
           }
 
           h1{
             @include clear;
-            color: $white;
+            //color: $white;
             font-size: 92px;
-            font-family: RobotoBold,sans-serif;
+            font-weight: bold;
+            //font-family: RobotoBold,sans-serif;
             @include shadow_text;
+
             @include devices-max-width-1200px{
               font-size: 82px;
             }
@@ -49,10 +53,10 @@
           .phone{
             display: flex;
             align-items: center;
-            color: $yellow;
+            //color: $yellow;
             @include shadow_text;
             font-size: 16px;
-            font-family: Roboto, sans-serif;
+            //font-family: Roboto, sans-serif;
 
             i{
               font-size:18px;
@@ -79,9 +83,10 @@
 
           h2{
             @include clear;
-            color: $white;
+            //color: $white;
+            //font-family: Roboto, sans-serif;
             font-size: 32px;
-            font-family: Roboto, sans-serif;
+
             @include shadow_text;
 
             @include devices-max-width-1200px{
@@ -98,7 +103,7 @@
           }
 
           span{
-            color: $yellow;
+            //color: $yellow;
             font-size: 18px;
             padding-top: 2px;
             @include shadow_text;
@@ -113,8 +118,8 @@
         .buttons{
           display: flex;
           flex-direction: column;
-          align-items: center;
-          justify-content: flex-end;
+          align-items: baseline;
+          justify-content: center;
           width: 200px;
           margin-left: auto;
           margin-bottom: -45px;
@@ -134,43 +139,33 @@
             //margin-left: -5px;
           }
 
-          a{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+          .key{
+            @include flex-center;
             width: 100%;
-            background-color: $green;
-            border: 1px solid $white;
-            border-radius: 3px;
-            color: $white;
-            text-decoration: none;
+            border: 2px solid;
+            border-radius: .3em;
             padding: 5px;
-            margin-bottom: 10px;
-            font-size:20px;
-            @include shadow_text;
-            @include shadow_block;
-            @include devices-max-width-1200px{
-              font-size:18px;
-            }
-            @include devices-max-width-992px{
-              font-size: 14px;
-            }
-            @include devices-max-width-768px{
-              margin: 5px;
-            }
-            &:hover{
-              color: $yellow;
-              border: 1px solid $yellow;
-            }
+            margin-bottom: 5px;
+            cursor: pointer;
 
             i{
               margin-right: 10px;
-              font-size: 22px;
-              @include devices-max-width-1200px{
-                font-size: 20px;
-              }
             }
           }
+
+          .mail{
+            @include flex-center;
+            width: 100%;
+            border: 2px solid;
+            border-radius: .3em;
+            padding: 5px;
+            cursor: pointer;
+
+            i{
+              margin-right: 10px;
+            }
+          }
+
 
         }
       }
@@ -185,9 +180,9 @@
           align-items: center;
           justify-content: center;
           width: 240px;
-          color: $yellow;
-          font-size: 20px;
-          @include shadow_text;
+          //color: $black;
+          font-size: 24px;
+          //@include shadow_text;
           @include devices-max-width-1200px{
             font-size: 18px;
           }
@@ -211,7 +206,7 @@
         }
 
         .slogan{
-          color: $yellow;
+          //color: $black;
           font-size: 20px;
           @include shadow_text;
           margin-left: 20px;
@@ -224,14 +219,14 @@
         }
       }
 
-      .panel{
+      .info_panel{
         display: flex;
         align-items: center;
-        background-color: $grey;
+        //background-color: $grey;
         margin-top: 10px;
         padding: 2px;
         height: 40px;
-        border: 1px solid $white;
+        border: 1px solid;
         border-radius: 3px;
         @include shadow_block;
 
@@ -242,7 +237,7 @@
           width: 50px;
 
           i{
-            color: $white;
+            //color: $color-link-grey;
 
             &.fa-chevron-right{
               font-size:16px;
@@ -257,7 +252,7 @@
 
             &.fa-2x{
               font-size: 32px;
-              color: $green-light;
+              //color: $black;
               margin-right: -5px;
               @include devices-max-width-1200px{
                 font-size: 28px;
@@ -280,7 +275,7 @@
         }
 
         .run_string{
-          color: $green3;
+          //color: $green3;
           width: 600px;
           font-size: 22px;
           @include devices-max-width-1200px{
@@ -298,18 +293,18 @@
           margin-left:auto;
           display: flex;
           align-items: center;
-          border: 2px solid $green-light;
+          border: 1px solid;
           border-radius: 3px;
-          background-color: $white;
+          //background-color: $white;
           @include devices-max-width-992px{
-            border: 1px solid $green-light;
+            border: 1px solid;
           }
 
           i{
             margin-left: 5px;
             margin-right: 5px;
             font-size: 20px;
-            color: $green-light;
+            //color: $green-light;
             @include devices-max-width-1200px{
               font-size: 18px;
             }
@@ -318,6 +313,7 @@
             }
           }
           input{
+            background-color: inherit;
             border: none;
             @include devices-max-width-1200px{
               width: 166px;
@@ -329,11 +325,11 @@
             }
           }
           button{
-            background-color:$green;
-            border: 1px solid $white;
+            background-color:inherit;
+            border: 1px solid;
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;
-            color: $white;
+            //color: $white;
             @include devices-max-width-1200px{
               font-size: 16px;
             }
@@ -344,8 +340,9 @@
             }
 
             &:hover{
-              color: $yellow;
-              border: 1px solid $yellow;
+              //color: $yellow;
+              border: 1px solid;
+              text-decoration: underline;
             }
 
           }

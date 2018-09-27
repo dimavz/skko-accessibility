@@ -9,7 +9,10 @@ html, body {
 }
 
 body {
-  background-color: $green;
+  background-color: $white;
+  a{
+    color: $black;
+  }
 
   .accessibility {
     letter-spacing: 0px;
@@ -127,9 +130,9 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   &.active {
-    color: $yellow;
+    color: $black;
   }
 }
 
