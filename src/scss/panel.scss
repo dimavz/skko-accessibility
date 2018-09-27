@@ -18,12 +18,14 @@
     align-items: center;
     font-size: $font-size1;
 
+
     .settings {
       width: 1160px;
       height: 40px;
       //border: 1px dashed #000000;
       display: flex;
       align-items: center;
+
 
       i {
         margin-left: 5px;
@@ -158,7 +160,7 @@
         margin-left: 10px;
 
         a {
-          color: $color2;
+          color: $color-link-grey;
           display: flex;
           align-items: center;
           text-decoration: none;
@@ -332,12 +334,13 @@
 
         i {
           margin-right: 10px;
+          color: $color-link-grey;
         }
 
         a {
+          color: $color-link-grey;
           display: flex;
           align-items: center;
-          color: $color2;
 
           p {
             @include clear;
