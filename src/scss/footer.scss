@@ -4,36 +4,36 @@
 
 #footer{
   padding-top: 10px;
-  background-color:$black;
+  //background-color:$black;
   padding-bottom: 20px;
 
   .wrap_footer{
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color:$grey;
-    border-bottom: 1px dashed $white;
-    border-top: 1px dashed $white;
+    //background-color:$grey;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
 
 
     .foot_block{
       padding: 10px;
       display: flex;
       flex-direction: column;
-      color: $white;
+      //color: $white;
       img{
         width: 200px;
         margin-left: 30px;
       }
 
       h3{
-        color: $green-light;
+        //color: $green-light;
         margin-bottom: 10px;
       }
       p{
-        color: $white;
+        //color: $white;
       }
       i{
-        color: $marine;
+        //color: $marine;
         font-size: 22px;
         margin-right: 20px;
       }
@@ -42,7 +42,7 @@
         margin-right: 15px;
       }
       span{
-        color: $yellow;
+        //color: $yellow;
       }
       ul{
         padding: 10px;
@@ -59,7 +59,7 @@
     justify-content: center;
 
     p{
-      color: $white;
+      //color: $white;
     }
 
     img{

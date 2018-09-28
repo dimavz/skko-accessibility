@@ -8,8 +8,8 @@
   margin-bottom: 10px;
 
   .wrap_block_links{
-    background-color:$white;
-    border: 3px solid $green-light;
+    //background-color:$white;
+    border: 1px solid;
     border-radius: 3px;
     padding: 10px;
     padding-bottom: 20px;
@@ -18,7 +18,7 @@
       margin-top: 15px;
       margin-left: 10px;
       font-size: 20px;
-      color: $green-light;
+      //color: $green-light;
       text-transform: uppercase;
     }
     ul{
@@ -29,13 +29,14 @@
 
       li{
         list-style-type:square;
-        color: $green;
+        //color: $green;
         a{
-          color: $green;
+          //color: $green;
           text-decoration: none;
 
           &:hover{
-            color: $green-light;
+            //color: $green-light;
+            text-decoration:underline;
           }
         }
       }
