@@ -14,130 +14,152 @@ body.color3 {
     }
   }
 
-  #header .accessibility {
+  #header  {
 
-    background-color: $color3;
+    .accessibility{
 
-    .settings {
+      background-color: darken($color3,15%);
 
-      .inputbox {
-        color: $color4;
-      }
+      .settings {
 
-      .a-fontsize {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
-
-        a {
-          background-image: url(../images/icons/blue/blue_fontsize.png);
-        }
-      }
-
-      .a-images {
-        display: flex;
-        margin-left: 10px;
-
-        a {
-          background-image: url(../images/icons/blue/blue_images.png);
-        }
-      }
-
-      .a-settings{
-        a{
+        .inputbox {
           color: $color4;
         }
 
-      }
+        .a-fontsize {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+          margin-right: 10px;
 
-      .a-normalversion{
-        a{
-          color: $color4;
+          a {
+            background-image: url(../images/icons/blue/blue_fontsize.png);
+          }
         }
-      }
 
-      .popped{
-        background-color: $color3;
-        color: $color4;
+        .a-images {
+          display: flex;
+          margin-left: 10px;
 
-        #color2{
-          border: 1px solid $color4;
+          a {
+            background-image: url(../images/icons/blue/blue_images.png);
+          }
+        }
+
+        .a-settings{
+          a{
+            color: $color4;
+          }
+
+        }
+
+        .a-normalversion{
+          a{
+            color: $color4;
+          }
+        }
+
+        .popped{
           background-color: $color3;
-        }
+          color: $color4;
 
-        .choose-font-family{
-          margin-left: 10px;
-
-          #roboto{
-            font-family: $font-family1;
-          }
-          #sans-serif{
-            font-family: $font-family2;
-          }
-          #serif{
-            font-family: $font-family3;
-          }
-
-          a {
-            padding: 5px;
-            background: $color3;
-            color: $color4;
-            border-radius: .3em;
+          #color2{
             border: 1px solid $color4;
+            background-color: $color3;
+          }
 
-            &.active {
+          .choose-font-family{
+            margin-left: 10px;
+
+            #roboto{
+              font-family: $font-family1;
+            }
+            #sans-serif{
+              font-family: $font-family2;
+            }
+            #serif{
+              font-family: $font-family3;
+            }
+
+            a {
               padding: 5px;
-              background: $color4;
-              color: $color3;
+              background: $color3;
+              color: $color4;
               border-radius: .3em;
+              border: 1px solid $color4;
+
+              &.active {
+                padding: 5px;
+                background: $color4;
+                color: $color3;
+                border-radius: .3em;
+              }
+            }
+          }
+
+          .choose-letter-spacing{
+            margin-left: 10px;
+
+            #spacing-small {
+              letter-spacing: 0px;
+            }
+
+            #spacing-normal {
+              letter-spacing: 2px;
+            }
+
+            #spacing-big {
+              letter-spacing: 5px;
+            }
+
+            a {
+              padding: 5px;
+              background: $color3;
+              color: $color4;
+              border-radius: .3em;
+              border: 1px solid $color4;
+
+              &.active {
+                padding: 5px;
+                background: $color4;
+                color: $color3;
+                border-radius: .3em;
+              }
+            }
+          }
+
+          .saveit{
+            .closepopped{
+              background-color: $color3;
+              color: $color4;
+              border: 4px double $color4;
+            }
+
+            .default{
+              background-color: $color3;
+              color: $color4;
+              border: 4px double $color4;
             }
           }
         }
+      }
 
-        .choose-letter-spacing{
-          margin-left: 10px;
+    }
 
-          #spacing-small {
-            letter-spacing: 0px;
-          }
+    .navbar {
 
-          #spacing-normal {
-            letter-spacing: 2px;
-          }
+      background-color: $color3;
 
-          #spacing-big {
-            letter-spacing: 5px;
-          }
-
-          a {
-            padding: 5px;
-            background: $color3;
-            color: $color4;
-            border-radius: .3em;
-            border: 1px solid $color4;
-
-            &.active {
-              padding: 5px;
-              background: $color4;
-              color: $color3;
-              border-radius: .3em;
+      .wrapper_nav{
+        >ul{
+          li{
+            &.dropdown{
+              ul{
+                background-color: $color3;
+              }
             }
-          }
-        }
 
-        .saveit{
-          .closepopped{
-            background-color: $color3;
-            color: $color4;
-            border: 4px double $color4;
-          }
-
-          .default{
-            background-color: $color3;
-            color: $color4;
-            border: 4px double $color4;
           }
         }
       }

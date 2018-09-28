@@ -51,7 +51,8 @@
     .wrapper_nav {
       display: flex;
       align-items: center;
-      height: 50px;
+      justify-content: flex-start;
+      min-height: 50px;
 
       .home_icon {
         height: 100%;
@@ -93,6 +94,7 @@
         @include clear-list;
         display: flex;
         align-items: center;
+        justify-content: flex-start;
         padding-left: 15px;
 
         @include devices-max-width-1200px {
@@ -104,7 +106,7 @@
         width: 100%;
 
         > li {
-          padding-right: 25px;
+          padding-right: 15px;
           text-transform: uppercase;
           //color: $white;
           display: flex;

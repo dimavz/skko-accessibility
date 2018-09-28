@@ -82,6 +82,7 @@ $(document).ready(function () {
         return false;
     });
 
+    // Установка настроек по умолчанию
     $('.default').click(function () {
         $('body').removeClass().addClass('fontsize-normal color1 imageson spacing-small roboto');
         $.cookie('blind-font-size', 'fontsize-normal', {path: '/'});

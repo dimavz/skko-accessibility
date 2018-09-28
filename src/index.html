@@ -35,9 +35,11 @@
             <i class="fa fa-flag fa-lg" aria-hidden="true"></i>
             <select class="inputbox advancedSelect" onchange="document.location.replace(this.value);">
                 <option dir="ltr" value="/be/">
-                    Беларускі</option>
+                    Беларускі
+                </option>
                 <option dir="ltr" value="/?template=myaccessibility" selected="selected">
-                    Русский</option>
+                    Русский
+                </option>
             </select>
             <div class="a-fontsize">
                 <p>Размер шрифта:</p>
@@ -68,10 +70,10 @@
                 <p class="choose-font-family">Выберите шрифт:
                     <a class="font-family active" id="roboto" rel="roboto" href="#">Roboto</a>
                     <a class="font-family" id="sans-serif" rel="sans-serif" href="#">Arial</a>
-                    <a class="font-family" id="serif" rel="serif"  href="#">Times New Roman</a>
+                    <a class="font-family" id="serif" rel="serif" href="#">Times New Roman</a>
                 </p>
                 <p class="choose-letter-spacing">Интервал между символами (кернинг):
-                    <a id="spacing-small" class="letter-spacing active"  rel="spacing-small" href="#">Стандартный</a>
+                    <a id="spacing-small" class="letter-spacing active" rel="spacing-small" href="#">Стандартный</a>
                     <a id="spacing-normal" class="letter-spacing" rel="spacing-normal" href="#">Средний</a>
                     <a id="spacing-big" class="letter-spacing" rel="spacing-big" href="#">Большой</a>
                 </p>
@@ -103,6 +105,67 @@
         </div>
 
     </div>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="menu_icon visible-xs-block">
+                <div class="wrap_icon">
+                    <i class="fa fa-bars" data-toggle="collapse" data-target="#mob_menu" aria-hidden="true"></i>
+                    <div class="run_string">
+                        <marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Quaerat, saepe.
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper_nav hidden-xs">
+                <div class="home_icon">
+                    <a class="active" href="/">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <ul>
+                    <li><a class="active" href="#">Главная</a></li>
+                    <li class="dropdown">
+                        <span>
+                            О системе
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Описание СККО</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="active">
+                            Владельцам
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Порядок заключения договора</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a class="active" href="#">График подключения к СККО</a></li>
+                            <li><a href="#">Тарифы и способы оплаты</a></li>
+                            <li><a href="#">Вопросы/Ответы</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>
+                            Публикации
+                        </span>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <ul>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Нормативные правовые акты</a></li>
+                            <li><a href="#">Разъяснения МНС</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Цто</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Наши партнёры</a></li>
+                </ul>
+            </div>
+        </div><!-- /.container -->
+    </nav><!--end navbar-->
     <nav class="mobile_menu visible-xs-block">
         <div class="container">
             <div id="mob_menu" class="collapse">
@@ -209,74 +272,14 @@
                 <div class="search">
                     <form action="" method="post">
                         <i class="fa fa-search" aria-hidden="true"></i>
-                        <input type="text" placeholder="Искать..." >
+                        <input type="text" placeholder="Искать...">
                         <button type="submit" onclick="this.form.searchword.focus();">Поиск</button>
                     </form>
                 </div>
             </div><!-- end panel-->
         </div><!--end container-->
     </div><!-- end wrap_header-->
-    <nav class="navbar">
-        <div class="container">
-            <div class="menu_icon visible-xs-block">
-                <div class="wrap_icon">
-                    <i class="fa fa-bars" data-toggle="collapse" data-target="#mob_menu" aria-hidden="true"></i>
-                    <div class="run_string">
-                        <marquee onmouseover=this.stop() onmouseout=this.start() behavior="scroll" direction="left">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat, saepe.
-                        </marquee>
-                    </div>
-                </div>
-            </div>
-            <div class="wrapper_nav hidden-xs">
-                <div class="home_icon">
-                    <a class="active" href="/">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <ul>
-                    <li><a class="active" href="#">Главная</a></li>
-                    <li class="dropdown">
-                        <span>
-                            О системе
-                        </span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <ul>
-                            <li><a href="#">Описание СККО</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown active">
-                        <span>
-                            Владельцам
-                        </span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <ul>
-                            <li><a href="#">Порядок заключения договора</a></li>
-                            <li><a href="#">Документы</a></li>
-                            <li><a class="active" href="#">График подключения к СККО</a></li>
-                            <li><a href="#">Тарифы и способы оплаты</a></li>
-                            <li><a href="#">Вопросы/Ответы</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <span>
-                            Публикации
-                        </span>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        <ul>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">Нормативные правовые акты</a></li>
-                            <li><a href="#">Разъяснения МНС</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Цто</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Наши партнёры</a></li>
-                </ul>
-            </div>
-        </div><!-- /.container -->
-    </nav><!--end navbar-->
+
 
 </header>
 <section id="slider">
@@ -447,9 +450,7 @@
     <div class="container">
         <div class="wrap_content">
             <div class="row">
-                <div class="col-md-12">
-                    Контент
-                </div>
+                Контент
             </div>
         </div>
     </div>
@@ -502,7 +503,9 @@
 
                     <div id="foot_left_block" class="foot_block">
                         <h3>Сервисы оплаты услуг</h3>
-                        <img src="images/baners/erip_pay.jpg" alt="">
+                        <a href="#">
+                            <img src="images/baners/erip_pay.jpg" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4">

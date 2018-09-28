@@ -13,127 +13,150 @@ body.color2 {
     }
   }
 
-  #header .accessibility {
+  #header {
 
-    background-color: $color2;
+    .accessibility{
 
-    .settings {
+      //background-color: $color2;
+      background-color: lighten($color2,15%);
 
-      .inputbox {
-        color: $color2;
-      }
+      .settings {
 
-      .a-fontsize {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
-        margin-right: 10px;
-
-        a {
-          background-image: url(../images/icons/black/b_fontsize.png);
+        .inputbox {
+          color: $color2;
         }
-      }
 
-      .a-images {
-        display: flex;
-        margin-left: 10px;
+        .a-fontsize {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+          margin-right: 10px;
+
+          a {
+            background-image: url(../images/icons/black/b_fontsize.png);
+          }
+        }
+
+        .a-images {
+          display: flex;
+          margin-left: 10px;
 
           a {
             background-image: url(../images/icons/black/b_images.png);
           }
-      }
-
-      .a-settings{
-        a{
-          color: $color1;
         }
 
-      }
-
-      .a-normalversion{
-        a{
-          color: $color1;
-        }
-      }
-
-      .popped{
-        background-color: $color2;
-        color: $color1;
-
-
-        #color2{
-          border: 1px solid $color1;
-        }
-
-        .choose-font-family{
-
-          #roboto{
-            font-family: $font-family1;
-          }
-          #sans-serif{
-            font-family: $font-family2;
-          }
-          #serif{
-            font-family: $font-family3;
-          }
-
-          a {
-            padding: 5px;
-            background: $color2;
+        .a-settings{
+          a{
             color: $color1;
-            border-radius: .3em;
-            border: 1px solid $color1;
+          }
 
-            &.active {
+        }
+
+        .a-normalversion{
+          a{
+            color: $color1;
+          }
+        }
+
+        .popped{
+          background-color: $color2;
+          color: $color1;
+
+
+          #color2{
+            border: 1px solid $color1;
+          }
+
+          .choose-font-family{
+
+            #roboto{
+              font-family: $font-family1;
+            }
+            #sans-serif{
+              font-family: $font-family2;
+            }
+            #serif{
+              font-family: $font-family3;
+            }
+
+            a {
               padding: 5px;
-              background: $color1;
-              color: $color2;
+              background: $color2;
+              color: $color1;
               border-radius: .3em;
+              border: 1px solid $color1;
+
+              &.active {
+                padding: 5px;
+                background: $color1;
+                color: $color2;
+                border-radius: .3em;
+              }
+            }
+          }
+
+          .choose-letter-spacing{
+            #spacing-small {
+              letter-spacing: 0px;
+            }
+
+            #spacing-normal {
+              letter-spacing: 2px;
+            }
+
+            #spacing-big {
+              letter-spacing: 5px;
+            }
+
+            a {
+              padding: 5px;
+              background: $color2;
+              color: $color1;
+              border-radius: .3em;
+              border: 1px solid $color1;
+
+              &.active {
+                padding: 5px;
+                background: $color1;
+                color: $color2;
+                border-radius: .3em;
+              }
+            }
+          }
+
+          .saveit{
+            .closepopped{
+              background-color: $color2;
+              color: $color1;
+              border: 4px double $color1;
+            }
+
+            .default{
+              background-color: $color2;
+              color: $color1;
+              border: 4px double $color1;
             }
           }
         }
+      }
 
-        .choose-letter-spacing{
-          #spacing-small {
-            letter-spacing: 0px;
-          }
+    }
 
-          #spacing-normal {
-            letter-spacing: 2px;
-          }
+    .navbar {
 
-          #spacing-big {
-            letter-spacing: 5px;
-          }
+      background-color: $color2;
 
-          a {
-            padding: 5px;
-            background: $color2;
-            color: $color1;
-            border-radius: .3em;
-            border: 1px solid $color1;
-
-            &.active {
-              padding: 5px;
-              background: $color1;
-              color: $color2;
-              border-radius: .3em;
+      .wrapper_nav{
+        >ul{
+          li{
+            &.dropdown{
+              ul{
+                background-color: $color2;
+              }
             }
-          }
-        }
 
-        .saveit{
-          .closepopped{
-            background-color: $color2;
-            color: $color1;
-            border: 4px double $color1;
-          }
-
-          .default{
-            background-color: $color2;
-            color: $color1;
-            border: 4px double $color1;
           }
         }
       }
