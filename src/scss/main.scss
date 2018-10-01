@@ -10,9 +10,9 @@ html, body {
 
 body {
   background-color: $white;
-  a{
+  a {
     color: $black;
-    &:hover{
+    &:hover {
       text-decoration: underline;
       color: inherit;
     }
@@ -28,15 +28,15 @@ body {
 
   //Установка шрифтов
 
-  &.roboto{
+  &.roboto {
     font-family: $font-family1;
   }
 
-  &.sans-serif{
+  &.sans-serif {
     font-family: $font-family2;
   }
 
-  &.serif{
+  &.serif {
     font-family: $font-family3;
 
     .accessibility {
@@ -47,11 +47,43 @@ body {
   //Установка размера текста
   &.fontsize-small {
 
-    font-size:$font-size;
+    font-size: $font-size;
 
     #header {
-      .navbar{
-        font-size:$font-size-navbar-small;
+      .navbar {
+        font-size: $font-size-navbar-small;
+      }
+
+      .wrap_header {
+
+        .header_content {
+          .logo {
+            h1 {
+              font-size: 82px;
+            }
+          }
+          .site_title {
+            h2 {
+              font-size: 28px;
+            }
+          }
+        }
+
+        .meta_info {
+          .phone {
+            font-size: 18px;
+          }
+          .slogan {
+            font-size: 18px;
+          }
+        }
+
+        .info_panel{
+          .run_string{
+            font-size: 18px;
+          }
+        }
+
       }
     }
 
@@ -59,18 +91,38 @@ body {
       background-position: 0px -31px !important;
     }
 
-    .popped  {
-      font-size:$font-size;
+    .popped {
+      font-size: $font-size;
+    }
+
+    #news{
+      .wrap_news{
+        h1{
+          font-size: 18px;
+        }
+
+        .articles{
+          .article{
+            .art_cont{
+              .title{
+                h3{
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
   &.fontsize-normal {
 
-    font-size:$font-size2;
+    font-size: $font-size2;
 
     #header {
-      .navbar{
-        font-size:$font-size-navbar-normal;
+      .navbar {
+        font-size: $font-size-navbar-normal;
       }
     }
 
@@ -78,54 +130,133 @@ body {
       background-position: -20px -31px !important;
     }
 
-    .popped  {
-      font-size:$font-size2;
+    .popped {
+      font-size: $font-size2;
+    }
+
+    #news{
+      .wrap_news{
+
+        .articles{
+          .article{
+            .art_cont{
+              .title{
+                h3{
+                  font-size: 20px;
+                  transition: .3s all;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
   &.fontsize-big {
 
-    font-size:$font-size3;
+    font-size: $font-size3;
 
     #header {
-      .navbar{
-        font-size:$font-size-navbar-big;
+      .navbar {
+        font-size: $font-size-navbar-big;
+      }
+      .wrap_header {
+
+        .header_content {
+          .logo {
+            h1 {
+              font-size: 102px;
+            }
+          }
+          .site_title {
+            h2 {
+              font-size: 36px;
+            }
+          }
+        }
+
+        .meta_info {
+          .phone {
+            font-size: 28px;
+          }
+          .slogan {
+            font-size: 22px;
+          }
+        }
+        .info_panel {
+          height: 45px;
+
+          .run_string {
+            font-size: 28px;
+          }
+        }
+
       }
     }
 
     a.a-fontsize-big {
-      background-position:-46px -31px !important;
+      background-position: -46px -31px !important;
     }
 
-    .popped  {
-      font-size:$font-size3;
+    .popped {
+      font-size: $font-size3;
+    }
+
+    #news{
+      .wrap_news{
+        h1{
+          font-size: 26px;
+        }
+
+        .top_article{
+          .title{
+            h2{
+              font-size: 24px;
+              transition: .3s all;
+            }
+          }
+        }
+
+        .articles{
+          .article{
+            .art_cont{
+              .title{
+                h3{
+                  font-size: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
-  &.color1{
+  &.color1 {
     background-color: $color1 !important;
 
-    .a-color1{
-      background-position:0 -31px !important;
+    .a-color1 {
+      background-position: 0 -31px !important;
     }
   }
 
-  &.color2{
+  &.color2 {
     background-color: $color2 !important;
 
-    .a-color2{
-      background-position:-26px -31px !important;
+    .a-color2 {
+      background-position: -26px -31px !important;
     }
   }
 
-  &.color3{
+  &.color3 {
     background-color: $color3 !important;
-    .a-color3{
-      background-position:100% -31px !important;
+    .a-color3 {
+      background-position: 100% -31px !important;
     }
   }
 
-  &.imageson{
+  &.imageson {
     .a-images a {
       background-position: 0 -27px;
     }
@@ -133,44 +264,43 @@ body {
 
   //Установка межбуквенного интервала
   &.spacing-small {
-    letter-spacing:$letter-spacing-small;
-    .popped{
-      letter-spacing:$letter-spacing-small;
+    letter-spacing: $letter-spacing-small;
+    .popped {
+      letter-spacing: $letter-spacing-small;
     }
 
-    #header{
-      .wrap_header{
+    #header {
+      .wrap_header {
         margin-top: 100px;
       }
     }
   }
 
   &.spacing-normal {
-    letter-spacing:$letter-spacing-normal;
-    .popped{
-      letter-spacing:$letter-spacing-normal;
+    letter-spacing: $letter-spacing-normal;
+    .popped {
+      letter-spacing: $letter-spacing-normal;
     }
-    #header{
-      .wrap_header{
+    #header {
+      .wrap_header {
         margin-top: 110px;
       }
     }
   }
 
   &.spacing-big {
-    letter-spacing:$letter-spacing-big;
-    .popped{
-      letter-spacing:$letter-spacing-big;
+    letter-spacing: $letter-spacing-big;
+    .popped {
+      letter-spacing: $letter-spacing-big;
     }
 
-    #header{
+    #header {
 
-      .wrap_header{
+      .wrap_header {
         margin-top: 110px;
       }
     }
   }
-
 
 }
 
