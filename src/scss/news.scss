@@ -3,326 +3,119 @@
 @import "partitions/media";
 
 #news {
-  //background-color: $green;
 
   .wrap_news {
     @include clear;
     border: 1px solid;
     border-radius: 3px;
-    //background-color: $white;
     padding: 10px;
     margin-bottom: 10px;
-    //height: 400px;
 
     h1 {
       @include clear;
-      //color: $green-light;
       font-size: 22px;
-      padding: 5px 20px;
-      //font-family: 'RobotoRegular', sans-serif;
+      margin: 5px 20px;
+      padding-bottom: 5px;
       text-transform: uppercase;
-    }
-
-    .top_article {
-      padding: 10px;
-      width: 100%;
-      height: 450px;
-      position: relative;
-      //cursor: pointer;
-
-      &:hover {
-        .content {
-          top: 0px;
-          height: 450px;
-
-          .title {
-
-            border-bottom: 2px dotted;
-          }
-          .text {
-            visibility: visible;
-            padding-left: 10px;
-          }
-        }
-      }
-
-      .image {
-        padding: 3px;
-        width: 100%;
-        height: 320px;
-        overflow: hidden;
-        border: 1px solid;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-
-      }
-
-      .content {
-        position: absolute;
-        padding: 10px;
-        padding-top: 0px;
-        top: 330px;
-        left: 0;
-        height: 100px;
-        overflow: hidden;
-        background-color: #fff;
-        transition: all .8s;
-
-        .title {
-          margin: 0;
-          padding: 5px;
-          margin-top: 20px;
-
-          .date {
-            display: flex;
-            .day {
-              padding-right: 5px;
-            }
-            .month {
-              padding-right: 5px;
-            }
-          }
-
-          h2 {
-            @include clear;
-            padding-top: 5px;
-            font-size: 20px;
-            //color: darken($grey, 20%);
-            height: 50px;
-            overflow: hidden;
-
-            a {
-              //color: darken($grey, 20%);
-              text-decoration: none;
-
-              &:hover {
-                //color: $green;
-              }
-            }
-          }
-        }
-
-        .text {
-          padding: 5px;
-          visibility: hidden;
-          max-height: 230px;
-          overflow: hidden;
-
-          a {
-            //color: $green-light;
-            text-decoration: underline;
-          }
-        }
-
-        .link {
-          margin-top: 10px;
-          margin-left: 10px;
-          padding: 3px;
-          //padding-left: 5px;
-          background-color: inherit;
-          width: 130px;
-          border-radius: 5px;
-          //@include shadow_block;
-          border: 1px solid;
-
-          &:hover{
-            @include shadow_block;
-          }
-          a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            justify-content: space-around;
-            //color: $white;
-
-            &:hover {
-              //color: $yellow;
-              text-decoration: underline;
-
-              i {
-                color: inherit;
-              }
-            }
-
-            i {
-              margin-top: 3px;
-              padding-right: 5px;
-              color: inherit;
-              //font-size: 16px;
-
-            }
-            span {
-              //font-size: 16px;
-            }
-          }
-
-        }
-
-      }
+      border-bottom: 1px solid;
     }
 
     .articles {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 10px;
+      margin: 20px;
 
       .article {
-        display: flex;
-        height: 170px;
-        overflow: hidden;
-        position: relative;
-        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid;
 
-        &:hover {
+        .art_title {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
 
-          .art_img {
-            visibility: hidden;
-            top: 100%;
+          .data {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 20px;
+            border-right: 1px solid;
+            //border-radius: .3em;
+            //width: 150px;
+
           }
-          .art_cont {
-            .date {
-              //top: 5px;
-              //left: 5px;
-              visibility: hidden;
-              top: 100%;
-            }
-            .title {
-              //left: 5px;
-              visibility: hidden;
-              top: 100%;
-            }
-            .art_text {
-              visibility: visible;
-              left: 5px;
-              top: 0px;
-            }
-            .link {
-              visibility: visible;
-              top:115px;
-            }
+          h2 {
+            @include clear;
           }
         }
 
-        .art_img {
-          position: absolute;
-          top: 0;
-          left: 5px;
-          padding: 3px;
-          width: 200px;
-          height: 140px;
-          border: 1px solid;
-          margin-right: 15px;
-          transition: all .8s;
+        .art_content {
+          display: flex;
+          margin-top: 20px;
 
           img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        .art_cont {
-          padding: 3px;
-
-          .date {
-            opacity: .7;
-            position: absolute;
-            top: 0px;
-            left: 220px;
-            //font-size: 16px;
-            transition: all .8s;
-          }
-          .title {
-            position: absolute;
-            left: 220px;
-            top: 30px;
-            transition: all .8s;
-            h3 {
-              @include clear;
-              //font-size: 20px;
-
-              a {
-                //color: darken($grey, 20%);
-                text-decoration: none;
-                &:hover {
-                  //color: $green;
-                }
-              }
-            }
-          }
-          .art_text {
-            padding: 0;
-            position: absolute;
-            top: 100%;
-            left: 5px;
-            visibility: hidden;
-            transition: all .8s;
-            max-height: 120px;
-            overflow: hidden;
-          }
-          .link {
-            margin-top: 5px;
-            padding: 3px;
-            position: absolute;
-            top: 100%;
-            left: 5px;
-            visibility: hidden;
-            transition: all .8s;
-            background-color:inherit;
+            width: 300px;
+            height: 200px;
+            margin-right: 20px;
+            padding: 5px;
             border: 1px solid;
-            border-radius: 5px;
-            width: 130px;
+          }
 
+          .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px;
 
-            &:hover{
-              @include shadow_block;
+            .intro {
+              height: 150px;
+              overflow: hidden;
+              margin-bottom: 10px;
             }
 
-            a{
-              text-decoration: none;
-              //color: $white;
+            .see_more {
               display: flex;
+              justify-content: flex-end;
               align-items: center;
-              justify-content: space-around;
-              &:hover{
-                color: inherit;
-                text-decoration: underline;
-              }
-              i{
-                margin-top: 3px;
-                margin-left: 5px;
-                font-size: 16px;
+              //border: 1px solid;
+              border-radius: .3em;
+              //width: 200px;
+              text-transform: uppercase;
+
+              i {
+                margin-left: 10px;
+                margin-right: 10px;
               }
             }
+
           }
         }
       }
     }
 
-    .all_news{
+    .all_news {
       display: flex;
       align-items: center;
       justify-content: center;
 
-      button{
+      button {
 
         padding: 5px 10px;
         background-color: inherit;
         border: 1px solid;
         border-radius: 5px;
-        &:hover{
+        &:hover {
           color: inherit;
           @include shadow_block;
-          a{
+          a {
             text-decoration: underline;
           }
         }
-        a{
+        a {
           color: inherit;
-          &:hover{
-             text-decoration: underline;
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
