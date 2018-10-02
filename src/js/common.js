@@ -183,12 +183,15 @@ $(document).ready(function () {
 
         if (images_on) {
             $.cookie('blind-images', 'imageson', {path: '/'});
-            $('img').css({'display':'block'});
+            // $('img').css({'display':'block'});
+            $('img').show(300);
+
             return false;
         }
         else if (images_off) {
             $.cookie('blind-images', 'imagesoff', {path: '/'});
-            $('img').css({'display':'none'});
+            // $('img').css({'display':'none'});
+            $('img').hide(300);
             return false;
         }
         else {
