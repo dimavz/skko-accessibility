@@ -96,6 +96,7 @@
         align-items: center;
         justify-content: flex-start;
         padding-left: 15px;
+        flex-wrap: wrap;
 
         @include devices-max-width-1200px {
           padding-left: 10px;
