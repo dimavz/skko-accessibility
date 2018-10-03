@@ -1,0 +1,11 @@
+@import "partitions/variables";
+@import "partitions/mixins";
+@import "partitions/media";
+
+@function px-to-em($px, $content:16px){
+  @return ($px/$content)*1em;
+}
+
+@function strip-value($value){
+  @return $value/(($value*0)+1);
+}
