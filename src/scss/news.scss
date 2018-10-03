@@ -77,17 +77,29 @@
 
             .see_more {
               display: flex;
-              justify-content: flex-end;
+              justify-content: flex-start;
               align-items: center;
               //border: 1px solid;
               border-radius: .3em;
               //width: 200px;
-              text-transform: uppercase;
+              //text-transform: uppercase;
 
-              i {
-                margin-left: 10px;
-                margin-right: 10px;
+              a{
+                padding: 5px;
+                border: 1px solid;
+                border-radius: .3em;
+
+                &:hover{
+                  @include shadow_block;
+                }
+
+                i {
+                  margin-left: 10px;
+                  margin-right: 10px;
+                }
               }
+
+
             }
 
           }

@@ -62,6 +62,31 @@
                 text-decoration: underline;
               }
             }
+
+            .post_button{
+              padding: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              margin-top: 10px;
+              //border: 1px solid;
+              a{
+                margin-right: 10px;
+                padding: 5px;
+                //text-transform: uppercase;
+                border: 1px solid;
+                border-radius: .3em;
+
+                &:hover{
+                  @include shadow_block;
+                }
+
+                i{
+                  margin-left: 10px;
+                }
+              }
+            }
+
           }
           .post_metainfo {
             padding-top: 10px;
