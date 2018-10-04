@@ -114,6 +114,14 @@ body {
         }
       }
     }
+
+    #block_links{
+      .wrap_block_links{
+        h3{
+          font-size: $font-size1;
+        }
+      }
+    }
   }
 
   &.fontsize-normal {
@@ -231,10 +239,18 @@ body {
         }
       }
     }
+
+    #block_links{
+      .wrap_block_links{
+        h3{
+          font-size: $font-size3;
+        }
+      }
+    }
   }
 
+  // Белая тема
   &.color1 {
-    background-color: $color1 !important;
 
     .a-color1 {
       background-position: 0 -31px !important;
@@ -269,11 +285,49 @@ body {
         }
       }
     }
+
+    .key{
+      &:hover{
+        background-color: $color2;
+        color: $color1;
+      }
+    }
+    .mail{
+      &:hover{
+        background-color: $color2;
+        color: $color1;
+      }
+    }
+
+    .search{
+      button {
+        background-color: $color2 !important;
+        color: $color1;
+      }
+    }
+
+    .see_more a{
+      &:hover{
+        background-color: $color2;
+        color: $color1;
+        text-decoration: none;
+      }
+    }
+    .all_news button{
+
+        &:hover{
+          background-color: $color2 !important;
+          color: $color1 !important;
+          a{
+            text-decoration: none !important;
+          }
+
+        }
+    }
+
   }
-
+  // Чёрная тема
   &.color2 {
-    background-color: $color2 !important;
-
     .a-color2 {
       background-position: -26px -31px !important;
     }
@@ -312,10 +366,48 @@ body {
         }
       }
     }
-  }
 
+    .key{
+      &:hover{
+        background-color: $color1;
+        color: $color2;
+      }
+    }
+    .mail{
+      &:hover{
+        background-color: $color1;
+        color: $color2;
+      }
+    }
+
+    .search{
+      button {
+        background-color: $color1 !important;
+        color: $color2;
+      }
+    }
+
+    .see_more a{
+      &:hover{
+        background-color: $color1;
+        color: $color2;
+        text-decoration: none;
+      }
+    }
+    .all_news button{
+
+      &:hover{
+        background-color: $color1 !important;
+        color: $color2 !important;
+        a{
+          text-decoration: none !important;
+        }
+
+      }
+    }
+  }
+  //Синяя тема
   &.color3 {
-    background-color: $color3 !important;
     .a-color3 {
       background-position: 100% -31px !important;
     }
@@ -353,8 +445,47 @@ body {
         }
       }
     }
-  }
 
+    .key{
+      &:hover{
+        background-color: $color4;
+        color: $color3;
+      }
+    }
+    .mail{
+      &:hover{
+        background-color: $color4;
+        color: $color3;
+      }
+    }
+
+    .search{
+      button {
+        background-color: $color4 !important;
+        color: $color3;
+      }
+    }
+
+    .see_more a{
+      &:hover{
+        background-color: $color4;
+        color: $color3;
+        text-decoration: none;
+      }
+    }
+    .all_news button{
+
+      &:hover{
+        background-color: $color4 !important;
+        color: $color3 !important;
+        a{
+          text-decoration: none !important;
+        }
+
+      }
+    }
+  }
+  //Коричневая тема
   &.color4 {
     .a-color3 {
       background-position: 100% -31px !important;
@@ -393,8 +524,47 @@ body {
         }
       }
     }
-  }
 
+    .key{
+      &:hover{
+        background-color: $color6;
+        color: $color5;
+      }
+    }
+    .mail{
+      &:hover{
+        background-color: $color6;
+        color: $color5;
+      }
+    }
+
+    .search{
+      button {
+        background-color: $color6 !important;
+        color: $color5;
+      }
+    }
+
+    .see_more a{
+      &:hover{
+        background-color: $color6;
+        color: $color5;
+        text-decoration: none;
+      }
+    }
+    .all_news button{
+
+      &:hover{
+        background-color: $color6 !important;
+        color: $color5 !important;
+        a{
+          text-decoration: none !important;
+        }
+
+      }
+    }
+  }
+  //Зелёная тема
   &.color5 {
     .a-color3 {
       background-position: 100% -31px !important;
@@ -431,6 +601,48 @@ body {
             }
           }
         }
+      }
+    }
+
+    .key{
+      &:hover{
+        background-color: $color7;
+        a{
+          color: $color8;
+        }
+      }
+    }
+    .mail{
+      &:hover{
+        background-color: $color7;
+        a{
+          color: $color8;
+        }
+      }
+    }
+    .search{
+      button {
+        background-color: $color7 !important;
+        color: $color8;
+      }
+    }
+
+    .see_more a{
+      &:hover{
+        background-color: $color7;
+        color: $color8;
+        text-decoration: none;
+      }
+    }
+    .all_news button{
+
+      &:hover{
+        background-color: $color7 !important;
+        color: $color8 !important;
+        a{
+          text-decoration: none !important;
+        }
+
       }
     }
   }

@@ -161,4 +161,54 @@ body.color4 {
       }
     }
   }
+
+  #content{
+    .wrap_content{
+      .main_content{
+        .mod_block{
+          .mod_content{
+            ul{
+              li{
+                &:hover, &.active {
+                  background-color: $color6;
+                  color: $color5;
+                }
+              }
+            }
+          }
+        }
+        .list_posts{
+          .post{
+            .post_info{
+              .post_button{
+                a{
+                  &:hover{
+                    background-color: $color6;
+                    color: $color5;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .pag_block{
+          .pages{
+            .wraper_ul{
+              ul{
+                li{
+                  &:hover, &.active{
+                    background-color: $color6;
+                    color: $color5;
+                    a{
+                      color: $color5;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

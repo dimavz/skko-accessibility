@@ -94,6 +94,9 @@
 
                 &:hover{
                   @include shadow_block;
+                  background-color: $color2;
+                  color: $color1;
+                  text-decoration: none;
                 }
 
                 i{
@@ -186,6 +189,19 @@
           li {
             margin: 5px;
             border-bottom: 1px dashed;
+
+            &:hover, &.active{
+              background-color: $color2;
+              color: $color1;
+
+              a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                color: $color1;
+                text-decoration: none;
+              }
+            }
           }
 
         }
