@@ -50,8 +50,8 @@
 
     .wrapper_nav {
       display: flex;
-      align-items: center;
       justify-content: flex-start;
+      align-items: center;
       min-height: 50px;
 
       .home_icon {
@@ -72,8 +72,6 @@
         }
 
         a {
-          //color: $color-link-grey;
-
           &.active {
             //color: $black;
           }
@@ -90,7 +88,6 @@
         }
       }
       > ul {
-        height: 100%;
         @include clear-list;
         display: flex;
         align-items: center;
@@ -107,10 +104,10 @@
         width: 100%;
 
         > li {
-          padding-right: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
           text-transform: uppercase;
-          //color: $white;
-          display: flex;
+          @include flex-center;
 
           @include devices-max-width-1200px {
             padding-right: 15px;
@@ -119,16 +116,12 @@
             padding-right: 10px;
           }
 
+          //&:first-child {
+          //  padding-left: 10px;
+          //}
 
-          &:first-child {
-            padding-left: 3px;
-          }
-
-          & a {
-            //color: $color-link-grey;
+          a {
             text-decoration: none;
-            max-font-size: 18px;
-            //@include shadow_text;
             @include devices-max-width-1200px {
               font-size: 16px;
             }
@@ -136,29 +129,14 @@
               font-size: 14px;
             }
 
-            &:hover, &.active {
-              //color: $black;
-              text-decoration: underline;
-            }
-
           }
 
-          &.active {
-            text-decoration: underline;
-          }
 
           &.dropdown {
             display: flex;
             align-items: center;
-            //position: relative;
-
-            .active{
-              text-decoration: underline;
-            }
 
             span {
-              //font-size: 18px;
-              //@include shadow_text;
               cursor: pointer;
 
               @include devices-max-width-1200px {
@@ -168,9 +146,6 @@
                 font-size: 14px;
               }
 
-              &:hover {
-                //color: $black;
-              }
             }
 
             i {
@@ -185,17 +160,12 @@
             }
 
             &:hover {
-              i {
-                //color: $black;
-              }
+
               ul {
-                //visibility: visible;
                 top: 39px;
-                //opacity: 1;
                 visibility: visible;
+                border: 1px solid;
                 z-index: 100;
-                //background-color: lighten($white,5%);
-                //background-color: black;
                 @include devices-max-width-1200px{
                   top: 37px;
                 }

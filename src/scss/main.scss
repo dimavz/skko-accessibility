@@ -78,8 +78,8 @@ body {
           }
         }
 
-        .info_panel{
-          .run_string{
+        .info_panel {
+          .run_string {
             font-size: 18px;
           }
         }
@@ -95,17 +95,17 @@ body {
       font-size: $font-size;
     }
 
-    #news{
-      .wrap_news{
-        h1{
+    #news {
+      .wrap_news {
+        h1 {
           font-size: 18px;
         }
 
-        .articles{
-          .article{
-            .art_cont{
-              .title{
-                h3{
+        .articles {
+          .article {
+            .art_cont {
+              .title {
+                h3 {
                   font-size: 18px;
                 }
               }
@@ -134,14 +134,14 @@ body {
       font-size: $font-size2;
     }
 
-    #news{
-      .wrap_news{
+    #news {
+      .wrap_news {
 
-        .articles{
-          .article{
-            .art_cont{
-              .title{
-                h3{
+        .articles {
+          .article {
+            .art_cont {
+              .title {
+                h3 {
                   font-size: 20px;
                   transition: .3s all;
                 }
@@ -203,26 +203,26 @@ body {
       font-size: $font-size3;
     }
 
-    #news{
-      .wrap_news{
-        h1{
+    #news {
+      .wrap_news {
+        h1 {
           font-size: 26px;
         }
 
-        .top_article{
-          .title{
-            h2{
+        .top_article {
+          .title {
+            h2 {
               font-size: 24px;
               transition: .3s all;
             }
           }
         }
 
-        .articles{
-          .article{
-            .art_cont{
-              .title{
-                h3{
+        .articles {
+          .article {
+            .art_cont {
+              .title {
+                h3 {
                   font-size: 24px;
                 }
               }
@@ -239,6 +239,36 @@ body {
     .a-color1 {
       background-position: 0 -31px !important;
     }
+
+    .wrapper_nav {
+      ul {
+        li {
+          &:hover {
+            color: $color1;
+            background-color: $color2;
+            > a{
+              color: $color1;
+            }
+          }
+          &.active {
+            color: $color1;
+            background-color: $color2;
+
+            > a{
+              color: $color1;
+            }
+          }
+          &.dropdown{
+            ul{
+              border: 1px solid $color2 !important;
+              li{
+                border-bottom: 1px solid $color2 !important;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &.color2 {
@@ -247,12 +277,161 @@ body {
     .a-color2 {
       background-position: -26px -31px !important;
     }
+
+    .wrapper_nav {
+      ul {
+        li {
+          &:hover {
+            color: $color2;
+            background-color: $color1;
+            > a{
+              color: $color2;
+            }
+          }
+          &.active {
+            color: $color2;
+            background-color: $color1;
+
+            > a{
+              color: $color2;
+            }
+          }
+          &.dropdown{
+            ul{
+              border: 1px solid $color1 !important;
+              li{
+                border-bottom: 1px solid $color1 !important;
+                &:hover{
+                  a{
+                    color: $color2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &.color3 {
     background-color: $color3 !important;
     .a-color3 {
       background-position: 100% -31px !important;
+    }
+    .wrapper_nav {
+      ul {
+        li {
+          &:hover {
+            color: $color3;
+            background-color: $color4;
+            > a{
+              color: $color3;
+            }
+          }
+          &.active {
+            color: $color3;
+            background-color: $color4;
+
+            > a{
+              color: $color3;
+            }
+          }
+          &.dropdown{
+            ul{
+              border: 1px solid $color4 !important;
+              li{
+                border-bottom: 1px solid $color4 !important;
+                &:hover{
+                  a{
+                    color: $color3;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.color4 {
+    .a-color3 {
+      background-position: 100% -31px !important;
+    }
+    .wrapper_nav {
+      ul {
+        li {
+          &:hover {
+            color: $color5;
+            background-color: $color6;
+            > a{
+              color: $color5;
+            }
+          }
+          &.active {
+            color: $color5;
+            background-color: $color6;
+
+            > a{
+              color: $color5;
+            }
+          }
+          &.dropdown{
+            ul{
+              border: 1px solid $color6 !important;
+              li{
+                border-bottom: 1px solid $color6 !important;
+                &:hover{
+                  a{
+                    color: $color5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.color5 {
+    .a-color3 {
+      background-position: 100% -31px !important;
+    }
+    .wrapper_nav {
+      ul {
+        li {
+          &:hover {
+            color: $color8;
+            background-color: $color7;
+            > a{
+              color: $color8;
+            }
+          }
+          &.active {
+            color: $color8;
+            background-color: $color7;
+
+            > a{
+              color: $color8;
+            }
+          }
+          &.dropdown{
+            ul{
+              border: 1px solid $color7 !important;
+              li{
+                border-bottom: 1px solid $color7 !important;
+                &:hover{
+                  a{
+                    color: $color8;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -299,9 +478,9 @@ body {
       .wrap_header {
         margin-top: 110px;
 
-        .meta_info{
+        .meta_info {
           margin-top: 35px;
-          .phone{
+          .phone {
             width: 352px;
           }
         }
@@ -310,4 +489,3 @@ body {
   }
 
 }
-
