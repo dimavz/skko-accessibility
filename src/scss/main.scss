@@ -122,6 +122,14 @@ body {
         }
       }
     }
+
+    #footer{
+      .wrap_footer{
+        h3{
+          font-size: $font-size1;
+        }
+      }
+    }
   }
 
   &.fontsize-normal {
@@ -242,6 +250,14 @@ body {
 
     #block_links{
       .wrap_block_links{
+        h3{
+          font-size: $font-size3;
+        }
+      }
+    }
+
+    #footer{
+      .wrap_footer{
         h3{
           font-size: $font-size3;
         }
