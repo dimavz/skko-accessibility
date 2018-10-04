@@ -15,6 +15,21 @@
       @include clear;
     }
 
+    .breadcrumbs {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 20px;
+      padding: 5px;
+      padding-left: 20px;
+      border: 1px solid;
+      border-radius: .3em;
+
+      p {
+        @include clear;
+      }
+    }
+
     .main_content {
       //border: 1px dashed;
       //margin: 20px;
@@ -177,20 +192,7 @@
       }
     }
 
-    .breadcrumbs {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      margin: 20px;
-      padding: 5px;
-      padding-left: 20px;
-      border: 1px solid;
-      border-radius: .3em;
 
-      p {
-        @include clear;
-      }
-    }
 
   }
 
