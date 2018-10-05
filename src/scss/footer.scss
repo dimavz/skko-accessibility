@@ -20,9 +20,27 @@
       display: flex;
       flex-direction: column;
       //color: $white;
-      img{
-        width: 200px;
-        margin-left: 30px;
+
+      .raschet {
+        margin-top: 10px;
+        a{
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          p{
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .ipay a{
+        display: flex;
+        align-items: center;
+
+        p{
+          margin-left: 20px;
+        }
       }
 
       h3{
@@ -30,20 +48,13 @@
         margin-bottom: 10px;
         text-transform: uppercase;
       }
-      p{
-        //color: $white;
-      }
       i{
-        //color: $marine;
         font-size: 22px;
         margin-right: 20px;
       }
       i.fa.fa-envelope-o{
         font-size: 16px;
         margin-right: 15px;
-      }
-      span{
-        //color: $yellow;
       }
       ul{
         padding: 10px;
@@ -58,10 +69,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    p{
-      //color: $white;
-    }
 
     img{
       width: 32px;
