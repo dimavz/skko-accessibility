@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    browser = require('browser-sync');
+    browser = require('browser-sync'),
+    cleanCSS = require('gulp-clean-css');
 
 var config ={
     paths:{
@@ -17,7 +18,8 @@ var config ={
     },
     output:{
         nameFileCss:'main.css',
-        pathCss:'src/css'
+        pathCss:'src/css',
+        pathDistCss:'dist/css'
     },
     srv_options:{
         basePath:'src'
@@ -42,6 +44,12 @@ gulp.task('scss', function () {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.pathCss))
         .pipe(browser.reload({stream: true}));
+});
+
+gulp.task('minify-css', function() {
+    return gulp.src(config.paths.css)
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest(config.output.pathDistCss));
 });
 
 
