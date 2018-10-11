@@ -306,12 +306,14 @@ body {
       &:hover{
         background-color: $color2;
         color: $color1;
+        border-radius: .3em;
       }
     }
     .mail{
       &:hover{
         background-color: $color2;
         color: $color1;
+        border-radius: .3em;
       }
     }
 
@@ -387,12 +389,14 @@ body {
       &:hover{
         background-color: $color1;
         color: $color2;
+        border-radius: .3em;
       }
     }
     .mail{
       &:hover{
         background-color: $color1;
         color: $color2;
+        border-radius: .3em;
       }
     }
 
@@ -466,12 +470,14 @@ body {
       &:hover{
         background-color: $color4;
         color: $color3;
+        border-radius: .3em;
       }
     }
     .mail{
       &:hover{
         background-color: $color4;
         color: $color3;
+        border-radius: .3em;
       }
     }
 
@@ -545,12 +551,14 @@ body {
       &:hover{
         background-color: $color6;
         color: $color5;
+        border-radius: .3em;
       }
     }
     .mail{
       &:hover{
         background-color: $color6;
         color: $color5;
+        border-radius: .3em;
       }
     }
 
@@ -621,6 +629,7 @@ body {
     }
 
     .key{
+      border-radius: .3em;
       &:hover{
         background-color: $color7;
         a{
@@ -629,6 +638,7 @@ body {
       }
     }
     .mail{
+      border-radius: .3em;
       &:hover{
         background-color: $color7;
         a{

@@ -58,6 +58,11 @@ body.color4 {
         .a-normalversion{
           a{
             color: $color5;
+
+            &:hover{
+              background-color: $color5;
+              color: $color6;
+            }
           }
         }
 

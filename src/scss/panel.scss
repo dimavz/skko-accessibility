@@ -329,16 +329,24 @@
 
       .a-normalversion {
         @include flex-center;
-        margin-left: 10px;
+        margin-left: 5px;
 
         i {
-          margin-right: 10px;
+          margin-right: 5px;
         }
 
         a {
-          color: $color-link-grey;
+          //color: inherit;
           display: flex;
           align-items: center;
+          text-decoration: none;
+
+          &:hover{
+            background-color: $color2;
+            color: $color1;
+            padding-right: 5px;
+            border-radius: .1em;
+          }
 
           p {
             @include clear;
