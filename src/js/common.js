@@ -268,27 +268,31 @@ $(document).ready(function () {
 
     init_settings();
 
+    //Прокрутка вверх при клике на кнопку
+    $('.flowing-scroll').on( 'click', function(){
+        var el = $(this);
+        var dest = el.attr('href'); // получаем направление
+        if(dest !== undefined && dest !== '') { // проверяем существование
+            $('html').animate({
+                    scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+                }, 500 // скорость прокрутки
+            );
+        }
+        return false;
+    });
+
+// Скрытие-Отображение кнопки прокрутки Вверх
+    $(window).scroll(function (event) {
+        var top = $(window).scrollTop();
+        if(top >= 50){
+            //show btn
+            $("#top_up").css("display", "block");
+        } else {
+            //hide btn
+            $("#top_up").css("display", "none");
+        }
+    });
+
 });
 
-// jQuery.fn.hint = function () {
-//     return this.each(function () {
-//         var t = jQuery(this);
-//         var title = t.attr('title');
-//         if (title) {
-//             t.blur(function () {
-//                 if (t.val() == '') {
-//                     t.val(title);
-//                     t.addClass('blur');
-//                 }
-//             });
-//             t.focus(function () {
-//                 if (t.val() == title) {
-//                     t.val('');
-//                     t.removeClass('blur');
-//                 }
-//             });
-//             t.blur();
-//         }
-//     });
-// };
 
